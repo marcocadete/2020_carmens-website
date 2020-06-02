@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+// If need, change your variables before importing Bulma
+$title-color: #ff0000;
+
+@import "~bulma/bulma.sass";
+
+body {
+  padding: 0px 20px;
+}
+
+/* Custom Margins */
+cc-mt-5 {
+  margin-top: 5px;
+}
+
+cc-mb-5 {
+  margin-bottom: 5px;
+}
+
+cc-mr-5 {
+  margin-right: 5px;
+}
+
+cc-ml-5 {
+  margin-left: 5px;
+}
+
+cc-mt-10 {
+  margin-top: 10px;
+}
+
+cc-mb-10 {
+  margin-bottom: 10px;
+}
+
+cc-mr-10 {
+  margin-right: 10px;
+}
+
+cc-ml-10 {
+  margin-left: 10px;
+}
+
+/* =WordPress
+-------------------------------------------------------------- */
+.wp-block-embed {
+  display: flex;
+  justify-content: center;
+}
+
+.wp-block-embed__wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.wp-block-embed__wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 90%;
+}
+
+.wp-block-columns {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.wp-block-column {
+  flex: 0 1 100%;
+  margin-bottom: 10px;
+
+  @media (min-width: 992px) {
+    flex: 0 1 50%;
+  }
+}
+
+.wp-block-image {
+  margin: 0 !important;
+}
+
+.wp-block-image img {
+  width: 100% !important;
+}
+
+.wp-block-pullqoute {
+}
+
+.wp-block-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.wp-social-link {
+  margin: 5px;
+}
+
+.wp-social-link-wordpress {
+}
+.wp-social-link-facebook {
+  fill: blue;
+}
+
+.wp-block-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.wp-block-button__link {
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignright {
+  justify-content: flex-end;
+  border: 2px solid black;
+}
+
+.alignleft {
+  justify-content: flex-start;
+  border: 2px solid black;
+}
+
+.has-text-align-center {
+  text-align: center;
+}
+
+.has-text-align-right {
+  text-align: right;
+}
+
+.has-text-align-left {
+  text-align: left;
+}

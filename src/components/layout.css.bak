@@ -7,6 +7,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightseagreen;
 }
 article,
 aside,
@@ -619,4 +620,80 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+/* My custom styling */
+
+section {
+  padding: 80px 10px;
+}
+
+blockquote {
+  display: inline-block;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+/*
+**** WordPress ****
+-------------------
+*/
+.wp-block-columns {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: magenta;
+  padding: 40px 10px;
+}
+
+.wp-block-image {
+}
+
+.wp-block-pullqoute {
+}
+
+.wp-block-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.wp-social-link {
+  margin: 5px;
+}
+
+.wp-social-link-wordpress {
+}
+.wp-social-link-facebook {
+  fill: blue;
+}
+
+.wp-block-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.wp-block-button__link {
 }
