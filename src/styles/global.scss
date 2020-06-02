@@ -10,36 +10,42 @@ body {
 }
 
 /* Custom Margins */
-cc-mt-5 {
+.cc-mt-5 {
   margin-top: 5px;
 }
 
-cc-mb-5 {
+.cc-mb-5 {
   margin-bottom: 5px;
 }
 
-cc-mr-5 {
+.cc-mr-5 {
   margin-right: 5px;
 }
 
-cc-ml-5 {
+.cc-ml-5 {
   margin-left: 5px;
 }
 
-cc-mt-10 {
+.cc-mt-10 {
   margin-top: 10px;
 }
 
-cc-mb-10 {
+.cc-mb-10 {
   margin-bottom: 10px;
 }
 
-cc-mr-10 {
+.cc-mr-10 {
   margin-right: 10px;
 }
 
-cc-ml-10 {
+.cc-ml-10 {
   margin-left: 10px;
+}
+
+/* =Column
+-------------------------------------------------------------- */
+.widget-col {
+  border-left: 2px solid rgba(128, 128, 128, 0.075);
 }
 
 /* =WordPress

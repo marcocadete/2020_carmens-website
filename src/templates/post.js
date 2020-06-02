@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 // Components
 import Layout from "../components/layout/layout"
+import ProfileWidget from "../components/profileWidget/profileWidget"
 
 const Post = props => {
   const {
@@ -15,15 +16,17 @@ const Post = props => {
     <Layout>
       <section>
         <div className="container">
-          <div className="columns">
-            <div className="column is-8">
+          <div className="columns is-variable is-8">
+            {/* Content column */}
+            <div className="column is-9">
               <div className="content">
                 <h1>{post.title}</h1>
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
               </div>
             </div>
-            <div className="column is-4" style={{ border: "2px solid purple" }}>
-              ihoiwheih
+            {/* Widget column */}
+            <div className="column widget-col is-3">
+              <ProfileWidget />
             </div>
           </div>
         </div>
