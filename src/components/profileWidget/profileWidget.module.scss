@@ -1,4 +1,12 @@
 .profile {
   display: flex;
   justify-content: center;
+  padding: 10px;
+
+  a {
+    color: inherit;
+    &:hover {
+      color: turquoise;
+    }
+  }
 }

@@ -16,24 +16,34 @@ const ProfileWidget = () => {
     <div className={styles.profile}>
       <div>
         <Avatar />
-        <h2 className="cc-mt-5 has-text-weight-semibold">Carmen Cadete</h2>
+        <h2 className="cc-mt-10 has-text-weight-semibold is-size-4">
+          Carmen Cadete
+        </h2>
         <p className="cc-mt-5">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry’s standard dummy text ever
           since the 1500s.
         </p>
-        <div className="cc-mt-10 is-flex is-size-6">
+        <div className="cc-mt-10 is-flex is-size-4">
           <div className="cc-mr-10 has-text-link">
-            <FaFacebook />
+            <a href="/">
+              <FaFacebook />
+            </a>
           </div>
           <div className="cc-mr-10 has-text-danger">
-            <FaInstagram />
+            <a href="/">
+              <FaInstagram />
+            </a>
           </div>
           <div className="cc-mr-10 has-text-info">
-            <FaLinkedinIn />
+            <a href="/">
+              <FaLinkedinIn />
+            </a>
           </div>
           <div className="cc-mr-10 has-text-info">
-            <FaTwitter />
+            <a href="/">
+              <FaTwitter />
+            </a>
           </div>
         </div>
       </div>

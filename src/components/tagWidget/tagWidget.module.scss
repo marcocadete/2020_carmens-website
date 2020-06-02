@@ -1,0 +1,23 @@
+.tag-widget {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+    background-color: #00d1b2;
+    padding: 3px 8px;
+    color: #fff;
+    border-radius: 10px;
+    margin: 4px 2px;
+
+    &:hover {
+      background-color: darken(#00d1b2, 10%);
+    }
+
+    a {
+      color: #fff !important;
+    }
+  }
+}

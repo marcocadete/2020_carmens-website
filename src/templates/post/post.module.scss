@@ -1,0 +1,25 @@
+.post {
+  padding: 80px 10px;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+}
+
+.toggle-btn {
+  display: block;
+  visibility: hidden;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (min-width: 1024px) {
+    visibility: visible;
+  }
+}

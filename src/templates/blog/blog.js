@@ -1,6 +1,6 @@
 import React from "react"
 import { navigate, graphql } from "gatsby"
-import PostEntry from "../components/postEntry/postEntry"
+import PostEntry from "../../components/postEntry/postEntry"
 
 const Blog = props => {
   const {
