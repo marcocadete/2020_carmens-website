@@ -1,0 +1,103 @@
+.header {
+  position: relative;
+  padding: 5% 20px;
+  background-color: #323232;
+}
+
+.image {
+  max-width: 500px;
+  transition: 900ms ease-in-out all;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.info-wrapper {
+  margin-top: 40px;
+}
+
+.info {
+  color: #fff;
+  letter-spacing: 1.5px;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+
+  //
+
+  // Mobile devices (up to 768px)
+  @media (min-width: 768px) {
+  }
+
+  // Tablet devices (from 769px)
+  @media (min-width: 769px) {
+    h1 {
+      font-weight: 500;
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  // Desktop devices (from 1024px)
+  @media (min-width: 1024px) {
+    max-width: 600px;
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-weight: 700;
+      font-size: 3.5rem;
+      color: #fff;
+    }
+
+    h2 {
+      padding: 0;
+      margin: 0;
+      font-weight: 500;
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    button {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  // Widescreen devices (from 1216px)
+  @media (min-width: 1216px) {
+  }
+  // Full HD (from 1408px)
+  @media (min-width: 1408px) {
+  }
+}

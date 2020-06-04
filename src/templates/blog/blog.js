@@ -85,61 +85,63 @@ const Blog = props => {
   if (posts.length > 0) {
     return (
       <Layout>
-        <section className={styles.blogSection}>
-          <BackgroundImage
-            className={styles.image}
-            fluid={props.data.file.childImageSharp.fluid}
-          >
-            <div className={styles.header}>
-              <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop has-text-weight-semibold">
-                Sharing my thoughts with the world
-              </h1>
-            </div>
-          </BackgroundImage>
-          <div className="container">
-            <div className="field">
-              <div className="control">
-                <input
-                  onChange={handleInput}
-                  className="input is-primary"
-                  type="text"
-                  placeholder="Type to filter posts..."
-                />
+        <section className="container">
+          <div className={styles.blogSection}>
+            <BackgroundImage
+              className={styles.image}
+              fluid={props.data.file.childImageSharp.fluid}
+            >
+              <div className={styles.header}>
+                <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop">
+                  Sharing my thoughts with the world
+                </h1>
               </div>
-            </div>
-            <hr className="is-invisible" />
-            <div className="columns is-multiline">
-              {props.data &&
-                props.data.wordpressData &&
-                posts.map(post => (
-                  <div className="column is-4" key={post.id}>
-                    <PostEntry post={post} />
-                  </div>
-                ))}
-            </div>
-            <div className="columns">
-              <div className="column is-4">
-                <nav
-                  className="pagination is-centered is-rounded"
-                  role="navigation"
-                  aria-label="pagination"
-                >
-                  {renderPreviousLink()}
-                  {renderNextLink()}
-                  {pageNumber > 0 && (
-                    <ul className="pagination-list">
-                      <li>
-                        <span
-                          className="pagination-link is-current"
-                          aria-label={"page " + pageNumber}
-                          aria-current="page"
-                        >
-                          {pageNumber}
-                        </span>
-                      </li>
-                    </ul>
-                  )}
-                </nav>
+            </BackgroundImage>
+            <div className="container">
+              <div className="field">
+                <div className="control">
+                  <input
+                    onChange={handleInput}
+                    className="input is-primary"
+                    type="text"
+                    placeholder="Type to filter posts..."
+                  />
+                </div>
+              </div>
+              <hr className="is-invisible" />
+              <div className="columns is-multiline">
+                {props.data &&
+                  props.data.wordpressData &&
+                  posts.map(post => (
+                    <div className="column is-4" key={post.id}>
+                      <PostEntry post={post} />
+                    </div>
+                  ))}
+              </div>
+              <div className="columns">
+                <div className="column is-4">
+                  <nav
+                    className="pagination is-centered is-rounded"
+                    role="navigation"
+                    aria-label="pagination"
+                  >
+                    {renderPreviousLink()}
+                    {renderNextLink()}
+                    {pageNumber > 0 && (
+                      <ul className="pagination-list">
+                        <li>
+                          <span
+                            className="pagination-link is-current"
+                            aria-label={"page " + pageNumber}
+                            aria-current="page"
+                          >
+                            {pageNumber}
+                          </span>
+                        </li>
+                      </ul>
+                    )}
+                  </nav>
+                </div>
               </div>
             </div>
           </div>
@@ -149,31 +151,33 @@ const Blog = props => {
   } else {
     return (
       <Layout>
-        <section className={styles.blogSection}>
-          <BackgroundImage
-            className={styles.image}
-            fluid={props.data.file.childImageSharp.fluid}
-          >
-            <div className={styles.header}>
-              <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop has-text-weight-semibold">
-                Sharing my thoughts with the world
+        <section className="container">
+          <div className={styles.blogSection}>
+            <BackgroundImage
+              className={styles.image}
+              fluid={props.data.file.childImageSharp.fluid}
+            >
+              <div className={styles.header}>
+                <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop has-text-weight-semibold">
+                  Sharing my thoughts with the world
+                </h1>
+              </div>
+            </BackgroundImage>
+            <div className="container">
+              <div className="field">
+                <div className="control">
+                  <input
+                    onChange={handleInput}
+                    className="input is-primary"
+                    type="text"
+                    placeholder="Type to filter posts..."
+                  />
+                </div>
+              </div>
+              <h1 className="is-size-6-mobile is-size-4 cc-mt-40">
+                Sorry no posts where found, try searching again?{" "}
               </h1>
             </div>
-          </BackgroundImage>
-          <div className="container">
-            <div className="field">
-              <div className="control">
-                <input
-                  onChange={handleInput}
-                  className="input is-primary"
-                  type="text"
-                  placeholder="Type to filter posts..."
-                />
-              </div>
-            </div>
-            <h1 className="is-size-6-mobile is-size-4 cc-mt-40">
-              Sorry no posts where found, try searching again?{" "}
-            </h1>
           </div>
         </section>
       </Layout>

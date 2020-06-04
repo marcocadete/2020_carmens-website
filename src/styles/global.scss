@@ -5,8 +5,34 @@
 // If need, change your variables before importing Bulma
 $link: #00d1b2;
 $family-primary: "Roboto", sans-serif;
+// $navbar-box-shadow-color: transparent;
+$navbar-background-color: #323232;
+$navbar-item-color: #fff;
+$navbar-item-hover-color: #00d1b2;
+$navbar-item-hover-background-color: #323232;
+$navbar-item-active-color: #00d1b2;
+$navbar-item-active-background-color: #323232;
+$navbar-burger-color: #00d1b2;
+$navbar-tab-hover-background-color: pink !important;
+$navbar-tab-hover-border-bottom-color: blue;
+// $navbar-tab-active-color:
+// $navbar-tab-active-background-color:
+$navbar-tab-active-border-bottom-color: #00d1b2;
+$navbar-tab-active-border-bottom-style: solid;
+// $navbar-dropdown-background-color:
+// $navbar-dropdown-item-hover-color: red;
+// $navbar-dropdown-item-hover-background-color: orange;
+// $navbar-dropdown-item-active-color:
+// $navbar-dropdown-item-active-background-color:
+// $navbar-divider-background-color:
+// $navbar-dropdown-item-hover-background-color: orange;
 
 @import "~bulma/bulma.sass";
+
+.navbar-burger:hover {
+  color: #fff;
+  background-color: transparent;
+}
 
 // Error Pages
 .cc-error-msg {
@@ -34,14 +60,20 @@ $family-primary: "Roboto", sans-serif;
   color: #053eff;
 }
 
+hr {
+  background-color: #fff;
+}
+
 html {
   overflow-y: auto;
+  overflow-x: hidden;
   font-family: "Roboto", sans-serif;
+  background-color: #fff;
 }
 
 body {
-  // padding: 0px 20px;
   font-family: "Roboto", sans-serif;
+  background-color: #fff;
 }
 
 /* Custom Margins */
@@ -95,6 +127,22 @@ body {
 
 .cc-ml-15 {
   margin-left: 15px;
+}
+
+.cc-mt-30 {
+  margin-top: 30px;
+}
+
+.cc-mb-30 {
+  margin-bottom: 30px;
+}
+
+.cc-mr-30 {
+  margin-right: 30px;
+}
+
+.cc-ml-30 {
+  margin-left: 30px;
 }
 
 .cc-mt-40 {

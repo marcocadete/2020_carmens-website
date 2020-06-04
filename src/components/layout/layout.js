@@ -19,9 +19,10 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="container">
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+    <>
       <Navbar />
+
+      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
 
       <main className={styles.main}>{children}</main>
       {/* <footer>
@@ -29,7 +30,7 @@ const Layout = ({ children }) => {
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer> */}
-    </div>
+    </>
   )
 }
 
