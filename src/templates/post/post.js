@@ -14,7 +14,6 @@ const Post = props => {
   const [showSideMenu, setShowSideMenu] = useState(false)
 
   const handleSideMenuVisablility = () => {
-    console.log("clicked")
     setShowSideMenu(!showSideMenu)
   }
   const {
@@ -63,7 +62,7 @@ const Post = props => {
             >
               <ProfileWidget />
               <br />
-              <TagWidget />
+              <TagWidget tags={post.tags} />
             </div>
           </div>
         </div>
@@ -91,7 +90,8 @@ export const pageQuery = graphql`
         tags {
           nodes {
             name
-            link
+            slug
+            id
           }
         }
         categories {

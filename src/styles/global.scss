@@ -1,12 +1,47 @@
 @charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap");
 
 // If need, change your variables before importing Bulma
-$title-color: #ff0000;
+$link: #00d1b2;
+$family-primary: "Roboto", sans-serif;
 
 @import "~bulma/bulma.sass";
 
+// Error Pages
+.cc-error-msg {
+  font-family: "Limelight", cursive;
+}
+
+// Brand Colors
+.cc-color-facebook {
+  color: #4267b2;
+}
+
+.cc-color-instagram {
+  color: #c13584;
+}
+
+.cc-color-twitter {
+  color: #1da1f2;
+}
+
+.cc-color-linkedin {
+  color: #2867b2;
+}
+
+.cc-color-behance {
+  color: #053eff;
+}
+
+html {
+  overflow-y: auto;
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   // padding: 0px 20px;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Custom Margins */
@@ -40,6 +75,42 @@ body {
 
 .cc-ml-10 {
   margin-left: 10px;
+}
+
+.cc-mt-10 {
+  margin-top: 10px;
+}
+
+.cc-mt-15 {
+  margin-top: 15px;
+}
+
+.cc-mb-15 {
+  margin-bottom: 15px;
+}
+
+.cc-mr-15 {
+  margin-right: 15px;
+}
+
+.cc-ml-15 {
+  margin-left: 15px;
+}
+
+.cc-mt-40 {
+  margin-top: 40px;
+}
+
+.cc-mb-40 {
+  margin-bottom: 40px;
+}
+
+.cc-mr-40 {
+  margin-right: 40px;
+}
+
+.cc-ml-40 {
+  margin-left: 40px;
 }
 
 /* =Column

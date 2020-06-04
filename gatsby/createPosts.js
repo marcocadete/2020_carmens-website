@@ -1,4 +1,5 @@
 const path = require(`path`)
+
 module.exports = async ({ actions, graphql }) => {
   const GET_POSTS = `
   query GET_POSTS($first:Int, $after:String){
@@ -38,6 +39,8 @@ module.exports = async ({ actions, graphql }) => {
       } = data
 
       const nodeIds = nodes.map(node => node.postId)
+
+      // Create blog pages
       const blogTemplate = path.resolve(`./src/templates/blog/blog.js`)
       const blogPagePath = !variables.after
         ? `/blog`
@@ -53,17 +56,19 @@ module.exports = async ({ actions, graphql }) => {
         },
         ids: nodeIds,
       }
+
       nodes.map(post => {
         allPosts.push(post)
       })
+
       if (hasNextPage) {
         pageNumber++
-        return fetchPosts({ first: 12, after: endCursor })
+        return fetchPosts({ first: 9, after: endCursor })
       }
       return allPosts
     })
 
-  await fetchPosts({ first: 12, after: null }).then(allPosts => {
+  await fetchPosts({ first: 9, after: null }).then(allPosts => {
     const postTemplate = path.resolve(`./src/templates/post/post.js`)
 
     blogPages.map(blogPage => {

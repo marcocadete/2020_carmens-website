@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false)
@@ -38,9 +39,13 @@ const Navbar = () => {
         className={showNav ? "navbar-menu is-active" : "navbar-menu"}
       >
         <div className="navbar-start">
-          <a className="navbar-item">Home</a>
+          <Link to="/" className="navbar-item" activeClassName="is-active">
+            Home
+          </Link>
 
-          <a className="navbar-item">Documentation</a>
+          <Link to="/blog" className="navbar-item" activeClassName="is-active">
+            Blog
+          </Link>
         </div>
 
         <div className="navbar-end">

@@ -1,0 +1,22 @@
+.blog-section {
+  padding: 40px 10px;
+}
+
+.no-posts {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+.image {
+  background-color: #cccccc;
+  min-height: 400px;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 20px 20px 5%;
+  align-items: center;
+  margin-bottom: 40px;
+}
