@@ -4,13 +4,17 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Header from "../components/header/header"
 import SocialSharing from "../components/socialSharing/socialSharing"
+import Services from "../components/services/services"
 import About from "../components/about/about"
+import Testimonials from "../components/testimonials/testimonials"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Header />
+    <Services />
     <About />
+    <Testimonials />
 
     <hr style={{ paddingTop: "800px", margin: 0 }} />
     <SocialSharing />

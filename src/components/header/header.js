@@ -29,15 +29,15 @@ const Header = () => {
                 <p>A freelance graphic designer based in Germany.</p>
                 <p>
                   I combine
-                  <span class="is-italic has-text-weight-semibold	has-text-primary cc-mr-5 cc-ml-5">
+                  <span className="is-italic has-text-weight-semibold	has-text-primary cc-mr-5 cc-ml-5">
                     creativity{" "}
                   </span>
                   with
-                  <span class="is-italic has-text-primary has-text-weight-semibold cc-ml-5">
+                  <span className="is-italic has-text-primary has-text-weight-semibold cc-ml-5">
                     strategic thinking.
                   </span>
                 </p>
-                <button class="button is-primary is-rounded cc-mt-30">
+                <button className="button is-primary is-rounded cc-mt-30">
                   How I can help you
                 </button>
               </div>

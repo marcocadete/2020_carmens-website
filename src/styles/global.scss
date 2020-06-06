@@ -30,6 +30,11 @@ $modal-z: 100;
 
 @import "~bulma/bulma.sass";
 
+button.navbar-burger {
+  background-color: transparent;
+  border: none;
+}
+
 .navbar-burger:hover {
   color: #fff;
   background-color: transparent;

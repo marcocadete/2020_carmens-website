@@ -14,8 +14,10 @@ const About = () => {
           <div className="column is-6">
             <div className={styles.info}>
               <div className="content">
-                <h2>About Me</h2>
-                <h3>Why hire me for your next project?</h3>
+                <h2 className="has-text-grey-dark">About Me</h2>
+                <h3 className="has-text-grey-dark">
+                  Why hire me for your next project?
+                </h3>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's

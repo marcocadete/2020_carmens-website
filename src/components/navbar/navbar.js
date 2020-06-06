@@ -13,11 +13,12 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img src={logo} width="112" height="28" />
+            <img src={logo} width="112" height="28" alt="logo" />
           </Link>
 
-          <a
-            role="button"
+          <button
+            // role="button"
+            // tabIndex="0"
             onClick={toggleNavDropDown}
             className={
               showNav
@@ -31,7 +32,7 @@ const Navbar = () => {
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </a>
+          </button>
         </div>
 
         <div
@@ -51,17 +52,6 @@ const Navbar = () => {
               Blog
             </Link>
           </div>
-
-          {/* <div className="navbar-end">
-            <div className="navbar-item">
-              <div className="buttons">
-                <a className="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a className="button is-light">Log in</a>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </nav>

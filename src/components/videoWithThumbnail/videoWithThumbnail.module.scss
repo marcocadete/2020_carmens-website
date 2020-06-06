@@ -20,6 +20,11 @@
   position: relative;
   max-width: 80%;
   z-index: 50;
+  border-radius: 6px;
+
+  .image {
+    border-radius: 6px;
+  }
 
   .play-button-container {
     position: absolute;
@@ -39,13 +44,19 @@
       z-index: 2;
       cursor: pointer;
       border: none;
+      transition: ease-in-out 1.5s;
       animation: shadow-bounce 2.5s infinite linear;
+
+      &:hover {
+        background-color: #1b4947;
+      }
     }
   }
 
   .overlay {
     position: absolute;
     background-color: black;
+    border-radius: 6px;
     opacity: 0.5;
     height: 100%;
     width: 100%;

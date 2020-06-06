@@ -11,7 +11,10 @@ const PostEntry = ({ post }) => {
     <article className={styles.postEntry}>
       <div className={styles.imageContainer}>
         {_has(post.featuredImage, "imageFile") && (
-          <Img fluid={post.featuredImage.imageFile.childImageSharp.fluid} />
+          <Img
+            fluid={post.featuredImage.imageFile.childImageSharp.fluid}
+            alt={post.title}
+          />
         )}
       </div>
       <h2 className="cc-mt-15 cc-mb-15 is-size-5 is-size-4-desktop has-text-weight-semibold">

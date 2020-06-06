@@ -1,6 +1,6 @@
 import React from "react"
 import { FaTag } from "react-icons/fa"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 // Styles
 import styles from "./tagWidget.module.scss"
