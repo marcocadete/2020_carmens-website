@@ -7,6 +7,7 @@ import SocialSharing from "../components/socialSharing/socialSharing"
 import Services from "../components/services/services"
 import About from "../components/about/about"
 import Testimonials from "../components/testimonials/testimonials"
+import Portfolio from "../components/portfolio/portfolio"
 
 const IndexPage = () => (
   <Layout>
@@ -15,9 +16,10 @@ const IndexPage = () => (
     <Services />
     <About />
     <Testimonials />
+    <Portfolio />
 
     <hr style={{ paddingTop: "800px", margin: 0 }} />
-    <SocialSharing />
+    {/* <SocialSharing /> */}
   </Layout>
 )
 

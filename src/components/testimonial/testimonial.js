@@ -8,7 +8,7 @@ import styles from "./testimonial.module.scss"
 
 const Testimonial = props => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={props.style}>
       <figure className={styles.testimonial}>
         <div className={styles.figWrapper}>
           <div>

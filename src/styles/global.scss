@@ -29,6 +29,12 @@ $modal-z: 100;
 // $navbar-dropdown-item-hover-background-color: orange;
 
 @import "~bulma/bulma.sass";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slick-dots li button:before {
+  color: #00d1b2 !important;
+}
 
 button.navbar-burger {
   background-color: transparent;
