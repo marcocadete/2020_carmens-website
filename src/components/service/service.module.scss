@@ -1,0 +1,11 @@
+.content {
+  h3 {
+    margin-top: 10px !important;
+  }
+}
+
+.icon {
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+}

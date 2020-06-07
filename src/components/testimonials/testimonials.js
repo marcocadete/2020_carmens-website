@@ -14,14 +14,15 @@ const Testimonials = props => {
     infinite: true,
     speed: 300,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
 
@@ -62,7 +63,7 @@ const Testimonials = props => {
         <div className="columns">
           <div className="column">
             <div className="content">
-              <h2 className="has-text-primary">Happy clients are saying...</h2>
+              <h2 className="has-text-primary">Testimonials</h2>
             </div>
           </div>
         </div>

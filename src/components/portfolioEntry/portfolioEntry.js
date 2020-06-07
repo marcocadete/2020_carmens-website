@@ -16,10 +16,12 @@ const PortfolioEntry = props => {
               <Link to={`/portfolio/${props.slug}`}>{props.title}</Link>
             </h2>
             <div dangerouslySetInnerHTML={{ __html: props.excerpt }} />
+            <Link className={styles.viewBtn} to={`/portfolio/${props.slug}`}>
+              View Portfolio
+            </Link>
           </div>
           <div className={styles.overlay}></div>
         </BackgroundImage>
-        {/* <Img className={styles.image} fluid={props.image} /> */}
       </article>
     </div>
   )

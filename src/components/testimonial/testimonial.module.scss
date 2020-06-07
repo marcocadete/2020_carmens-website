@@ -1,4 +1,5 @@
 .container {
+  cursor: grab;
   position: relative;
   padding: 10px 20px;
   color: #323232;
@@ -13,6 +14,7 @@
   background-color: #00d1b2;
   border-radius: 6px;
   padding: 20px;
+  min-height: 330px;
 }
 
 .image {

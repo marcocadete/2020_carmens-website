@@ -46,6 +46,11 @@ button.navbar-burger {
   background-color: transparent;
 }
 
+.progress {
+  margin: 0px 0px 20px 0px !important;
+  height: 5px !important;
+}
+
 // Error Pages
 .cc-error-msg {
   font-family: "Limelight", cursive;
@@ -86,91 +91,92 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   background-color: #fff;
+  overflow: hidden;
 }
 
 /* Custom Margins */
 .cc-mt-5 {
-  margin-top: 5px;
+  margin-top: 5px !important;
 }
 
 .cc-mb-5 {
-  margin-bottom: 5px;
+  margin-bottom: 5px !important;
 }
 
 .cc-mr-5 {
-  margin-right: 5px;
+  margin-right: 5px !important;
 }
 
 .cc-ml-5 {
-  margin-left: 5px;
+  margin-left: 5px !important;
 }
 
 .cc-mt-10 {
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
 
 .cc-mb-10 {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 
 .cc-mr-10 {
-  margin-right: 10px;
+  margin-right: 10px !important;
 }
 
 .cc-ml-10 {
-  margin-left: 10px;
+  margin-left: 10px !important;
 }
 
 .cc-mt-10 {
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
 
 .cc-mt-15 {
-  margin-top: 15px;
+  margin-top: 15px !important;
 }
 
 .cc-mb-15 {
-  margin-bottom: 15px;
+  margin-bottom: 15px !important;
 }
 
 .cc-mr-15 {
-  margin-right: 15px;
+  margin-right: 15px !important;
 }
 
 .cc-ml-15 {
-  margin-left: 15px;
+  margin-left: 15px !important;
 }
 
 .cc-mt-30 {
-  margin-top: 30px;
+  margin-top: 30px !important;
 }
 
 .cc-mb-30 {
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
 }
 
 .cc-mr-30 {
-  margin-right: 30px;
+  margin-right: 30px !important;
 }
 
 .cc-ml-30 {
-  margin-left: 30px;
+  margin-left: 30px !important;
 }
 
 .cc-mt-40 {
-  margin-top: 40px;
+  margin-top: 40px !important;
 }
 
 .cc-mb-40 {
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
 }
 
 .cc-mr-40 {
-  margin-right: 40px;
+  margin-right: 40px !important;
 }
 
 .cc-ml-40 {
-  margin-left: 40px;
+  margin-left: 40px !important;
 }
 
 /* =Column

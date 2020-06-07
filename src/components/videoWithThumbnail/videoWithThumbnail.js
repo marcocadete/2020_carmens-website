@@ -17,7 +17,7 @@ const VideoWithThumbnail = ({ videoSrcURL, videoTitle, ...props }) => {
 
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "profile-thumb.png" }) {
+      placeholderImage: file(relativePath: { eq: "video-img.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid

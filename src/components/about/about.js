@@ -5,6 +5,7 @@ import styles from "./about.module.scss"
 
 // Components
 import VideoWithThumbnail from "../videoWithThumbnail/videoWithThumbnail"
+import Skills from "../skills/skills"
 
 const About = () => {
   return (
@@ -31,6 +32,14 @@ const About = () => {
                   like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
               </div>
+            </div>
+            <div className="columns">
+              <div className="column">
+                <div className="content">
+                  <Skills />
+                </div>
+              </div>
+              <div className="column">...</div>
             </div>
           </div>
           <div className="column is-6">

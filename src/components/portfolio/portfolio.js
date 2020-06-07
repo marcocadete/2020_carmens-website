@@ -34,7 +34,6 @@ const Portfolio = props => {
     }
   `)
 
-  // console.log(data)
   const listOfPortfolios = data.wordpressData.portfolios.nodes
   return (
     <section className={styles.portfolio}>
@@ -52,7 +51,7 @@ const Portfolio = props => {
       </div>
       <hr className="is-invisible" />
       <div className={"container " + styles.container}>
-        <div className="columns is-multiline">
+        <div className={"columns is-mobile is-multiline " + styles.columns}>
           {listOfPortfolios.map(portfolio => (
             <PortfolioEntry
               key={portfolio.id}

@@ -2,8 +2,9 @@
   padding: 80px 20px;
 }
 
-.container {
-  // background-color: #323232;
-  // padding: 20px;
-  // border-radius: 6px;
+.columns {
+  @media (max-width: 768px) {
+    flex-wrap: nowrap !important;
+    overflow: auto;
+  }
 }
