@@ -13,7 +13,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-
       <main className={styles.main}>{children}</main>
       <Footer />
     </>

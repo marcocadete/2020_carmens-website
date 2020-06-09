@@ -1,6 +1,9 @@
-.post {
-  padding: 80px 10px;
-  min-height: 100vh;
+.portfolio {
+  padding: 10px 10px;
+
+  @media (min-width: 1024px) {
+    padding: 80px 10px;
+  }
 }
 
 .toggle-container {
@@ -26,12 +29,14 @@
 }
 
 .hideSideMenu {
+  margin-bottom: 30px;
   @media (min-width: 1024px) {
     display: none;
   }
 }
 
 .showSideMenu {
+  margin-bottom: 30px;
   @media (min-width: 1024px) {
     display: block;
   }

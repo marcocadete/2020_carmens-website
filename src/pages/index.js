@@ -18,7 +18,6 @@ const IndexPage = () => (
     <Testimonials />
     <Portfolio />
 
-    <hr style={{ paddingTop: "800px", margin: 0 }} />
     {/* <SocialSharing /> */}
   </Layout>
 )

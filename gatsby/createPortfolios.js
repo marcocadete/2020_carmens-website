@@ -39,7 +39,7 @@ module.exports = async ({ actions, graphql }) => {
 
       const nodeIds = nodes.map(node => node.portfolioId)
       const portfolioListTemplate = path.resolve(
-        `./src/templates/portfolioList.js`
+        `./src/templates/portfolioList/portfolioList.js`
       )
       const portfolioListPagePath = !variables.after
         ? `/portfolio`
@@ -55,9 +55,11 @@ module.exports = async ({ actions, graphql }) => {
         },
         ids: nodeIds,
       }
+
       nodes.map(portfolio => {
         allPortfolios.push(portfolio)
       })
+
       if (hasNextPage) {
         pageNumber++
         return fetchPortfolios({ first: 12, after: endCursor })
@@ -65,8 +67,10 @@ module.exports = async ({ actions, graphql }) => {
       return allPortfolios
     })
 
-  await fetchPortfolios({ first: 12, after: null }).then(allPortfolios => {
-    const portfolioTemplate = path.resolve(`./src/templates/portfolio.js`)
+  await fetchPortfolios({ first: 9, after: null }).then(allPortfolios => {
+    const portfolioTemplate = path.resolve(
+      `./src/templates/portfolio/portfolio.js`
+    )
 
     portfolioPages.map(portfolioListPage => {
       console.log(

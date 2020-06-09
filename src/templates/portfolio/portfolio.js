@@ -9,9 +9,9 @@ import ProfileWidget from "../../components/profileWidget/profileWidget"
 import TagWidget from "../../components/tagWidget/tagWidget"
 
 // Styles
-import styles from "./post.module.scss"
+import styles from "./portfolio.module.scss"
 
-const Post = props => {
+const Portfolio = props => {
   const [showSideMenu, setShowSideMenu] = useState(false)
 
   const handleSideMenuVisablility = () => {
@@ -19,13 +19,13 @@ const Post = props => {
   }
   const {
     data: {
-      wordpressData: { post },
+      wordpressData: { portfolio },
     },
   } = props
 
   return (
     <Layout>
-      <section className={styles.post}>
+      <section className={styles.portfolio}>
         <div className="container">
           <div className="columns is-multiline">
             {/* Content column */}
@@ -51,24 +51,28 @@ const Post = props => {
               <div className="content">
                 <Img
                   style={{ borderRadius: "6px" }}
-                  fluid={post.featuredImage.imageFile.childImageSharp.fluid}
+                  fluid={
+                    portfolio.featuredImage.imageFile.childImageSharp.fluid
+                  }
                 />
-                <h1>{post.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                <h1 className="cc-mb-30 is-size-1-desktop">
+                  {portfolio.title}
+                </h1>
+                <div dangerouslySetInnerHTML={{ __html: portfolio.content }} />
               </div>
             </div>
-            {/* Widget column */}
+            {/* Widget column Desktop*/}
             <div
               className={
                 showSideMenu
-                  ? "column widget-col is-12 is-3-desktop is-offset-1-desktop " +
+                  ? "column widget-col is-12 is-3-desktop is-offset-1-desktop" +
                     styles.showSideMenu
                   : styles.hideSideMenu
               }
             >
               <ProfileWidget />
               <br />
-              <TagWidget tags={post.tags} page="blog" />
+              <TagWidget tags={portfolio.tags} page="portfolio" />
             </div>
           </div>
         </div>
@@ -77,22 +81,15 @@ const Post = props => {
   )
 }
 
-export default Post
+export default Portfolio
 
 export const pageQuery = graphql`
-  query GET_POST($id: ID!) {
+  query GET_PORTFOLIO($id: ID!) {
     wordpressData {
-      post(id: $id) {
+      portfolio(id: $id) {
         title
         content
         slug
-        author {
-          name
-          slug
-          avatar {
-            url
-          }
-        }
         featuredImage {
           sourceUrl
           imageFile {
@@ -108,12 +105,6 @@ export const pageQuery = graphql`
             name
             slug
             id
-          }
-        }
-        categories {
-          nodes {
-            name
-            link
           }
         }
       }

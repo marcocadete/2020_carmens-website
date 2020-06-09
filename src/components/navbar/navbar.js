@@ -8,6 +8,7 @@ const Navbar = () => {
   const toggleNavDropDown = () => {
     setShowNav(!showNav)
   }
+
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="container">
@@ -50,6 +51,13 @@ const Navbar = () => {
               activeClassName="is-active"
             >
               Blog
+            </Link>
+            <Link
+              to="/portfolio"
+              className="navbar-item"
+              activeClassName="is-active"
+            >
+              Portfolio
             </Link>
           </div>
         </div>

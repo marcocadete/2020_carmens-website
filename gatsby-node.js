@@ -1,5 +1,5 @@
 const createPosts = require(`./gatsby/createPosts`)
-// const createPortfolios = require(`./gatsby/createPortfolios`)
+const createPortfolios = require(`./gatsby/createPortfolios`)
 const createTagPages = require(`./gatsby/createTags`)
 
 /* --------- Prepare images from wordpress for gatsby source images --------- */
@@ -45,6 +45,6 @@ exports.createResolvers = async ({
 
 exports.createPages = async ({ actions, graphql }) => {
   await createPosts({ actions, graphql })
-  // await createPortfolios({ actions, graphql })
+  await createPortfolios({ actions, graphql })
   await createTagPages({ actions, graphql })
 }

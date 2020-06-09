@@ -1,20 +1,23 @@
 import React, { useState } from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 // Components
 import Layout from "../../components/layout/layout"
-import PostEntry from "../../components/postEntry/postEntry"
+import PortfolioTemplateEntry from "../../components/portfolioTemplateEntry/portfolioTemplateEntry"
+// import Seo from "../components/Seo"
 
 // Styles
-import styles from "./blog.module.scss"
+import styles from "./tag.module.scss"
 
-const Blog = props => {
-  const allPosts = props.data.wordpressData.posts.nodes
-
+const PortfolioTagTemplate = props => {
   const {
-    pageContext: { pageNumber, hasNextPage },
+    data: {
+      wordpressData: { tag },
+    },
   } = props
+
+  const allPortfolios = tag.portfolios.nodes
 
   const [state, setState] = useState({
     filteredData: [],
@@ -23,11 +26,11 @@ const Blog = props => {
 
   const hasSearchResults = state.filteredData && state.query !== ""
 
-  const posts = hasSearchResults ? state.filteredData : allPosts
+  const portfolios = hasSearchResults ? state.filteredData : allPortfolios
 
   const handleInput = event => {
     const query = event.target.value
-    const filteredData = posts.filter(post => {
+    const filteredData = portfolios.filter(post => {
       // Destructure data from post
       const { title, tags } = post
 
@@ -38,6 +41,7 @@ const Blog = props => {
           listOfTagNames.push(tag.name)
         })
       }
+
       return (
         // Contains the query string
         title.toLowerCase().includes(query.toLowerCase()) ||
@@ -45,6 +49,7 @@ const Blog = props => {
           listOfTagNames.join("").toLowerCase().includes(query.toLowerCase()))
       )
     })
+
     // update state according to the latest query and results
     setState({
       query, // with current query string from the `Input` event
@@ -52,41 +57,11 @@ const Blog = props => {
     })
   }
 
-  const renderPreviousLink = () => {
-    let previousLink = null
-
-    if (!pageNumber) {
-      return null
-    } else if (1 === pageNumber) {
-      previousLink = `/blog`
-    } else if (1 < pageNumber) {
-      previousLink = `/blog/page/${pageNumber - 1}`
-    }
-
-    return (
-      <Link to={previousLink} className="pagination-previous">
-        Previous Posts
-      </Link>
-    )
-  }
-
-  const renderNextLink = () => {
-    if (hasNextPage) {
-      return (
-        <Link to={`/blog/page/${pageNumber + 1}`} className="pagination-next">
-          Next Posts
-        </Link>
-      )
-    } else {
-      return null
-    }
-  }
-
-  if (posts.length > 0) {
+  if (portfolios.length > 0) {
     return (
       <Layout>
         <section className="container">
-          <div className={styles.blogSection}>
+          <div className={styles.tagSection}>
             <BackgroundImage
               className={styles.image}
               fluid={props.data.file.childImageSharp.fluid}
@@ -95,57 +70,39 @@ const Blog = props => {
                 <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop">
                   Sharing my{" "}
                   <span className="has-text-weight-bold cc-underline">
-                    thoughts
+                    work
                   </span>{" "}
                   with the world
                 </h1>
               </div>
             </BackgroundImage>
             <div className="container">
+              <h1 className="is-size-6 is-size-4-desktop cc-mb-5">
+                <span className="is-italic cc-mr-15">
+                  Portfolios related to:
+                </span>
+                <span className="has-text-primary is-size-4 is-size-3-desktop">
+                  {tag.name}
+                </span>
+              </h1>
               <div className="field">
                 <div className="control">
                   <input
                     onChange={handleInput}
                     className="input is-primary"
                     type="text"
-                    placeholder="Type to filter posts..."
+                    placeholder="Type to filter portfolios..."
                   />
                 </div>
               </div>
               <hr className="is-invisible" />
               <div className="columns is-multiline">
-                {props.data &&
-                  props.data.wordpressData &&
-                  posts.map(post => (
-                    <div className="column is-4" key={post.id}>
-                      <PostEntry post={post} />
+                {portfolios.length > 0 &&
+                  portfolios.map(portfolio => (
+                    <div className="column is-4" key={portfolio.id}>
+                      <PortfolioTemplateEntry portfolio={portfolio} />
                     </div>
                   ))}
-              </div>
-              <div className="columns">
-                <div className="column is-4">
-                  <nav
-                    className="pagination is-centered is-rounded"
-                    role="navigation"
-                    aria-label="pagination"
-                  >
-                    {renderPreviousLink()}
-                    {renderNextLink()}
-                    {pageNumber > 0 && (
-                      <ul className="pagination-list">
-                        <li>
-                          <span
-                            className="pagination-link is-current"
-                            aria-label={"page " + pageNumber}
-                            aria-current="page"
-                          >
-                            {pageNumber}
-                          </span>
-                        </li>
-                      </ul>
-                    )}
-                  </nav>
-                </div>
               </div>
             </div>
           </div>
@@ -156,22 +113,26 @@ const Blog = props => {
     return (
       <Layout>
         <section className="container">
-          <div className={styles.blogSection}>
+          <div className={styles.tagSection}>
             <BackgroundImage
               className={styles.image}
               fluid={props.data.file.childImageSharp.fluid}
             >
               <div className={styles.header}>
                 <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop has-text-weight-semibold">
-                  Sharing my
-                  <span className="has-text-weight-bold cc-underline">
-                    thoughts
-                  </span>{" "}
-                  with the world
+                  Sharing my work with the world
                 </h1>
               </div>
             </BackgroundImage>
             <div className="container">
+              <h1 className="is-size-6 is-size-4-desktop cc-mb-5">
+                <span className="is-italic cc-mr-15">
+                  Portfolios related to:
+                </span>
+                <span className="has-text-primary is-size-4 is-size-3-desktop">
+                  {tag.name}
+                </span>
+              </h1>
               <div className="field">
                 <div className="control">
                   <input
@@ -183,7 +144,7 @@ const Blog = props => {
                 </div>
               </div>
               <h1 className="is-size-6-mobile is-size-4 cc-mt-40">
-                Sorry no posts where found, try searching again?{" "}
+                Sorry no portfolios where found, try searching again?{" "}
               </h1>
             </div>
           </div>
@@ -193,14 +154,39 @@ const Blog = props => {
   }
 }
 
-export default Blog
+export default PortfolioTagTemplate
 
-export const query = graphql`
-  query GET_POSTS($ids: [ID]) {
+export const pageQuery = graphql`
+  query GET_PORTFOLIO_TAG($id: ID!) {
     wordpressData {
-      posts(where: { in: $ids }) {
-        nodes {
-          ...PostEntryFragment
+      tag(id: $id) {
+        id
+        name
+        slug
+        portfolios(first: 100) {
+          nodes {
+            id
+            title
+            slug
+            date
+            content: excerpt
+            tags {
+              nodes {
+                name
+              }
+            }
+            featuredImage {
+              sourceUrl
+              imageFile {
+                childImageSharp {
+                  fluid(maxWidth: 640, maxHeight: 426, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluidLimitPresentationSize
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

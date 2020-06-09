@@ -1,0 +1,13 @@
+.portfolio-entry {
+  margin: 20px 0px 80px 0;
+  .image-container {
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+
+    img {
+      border-radius: 5px;
+    }
+  }
+}

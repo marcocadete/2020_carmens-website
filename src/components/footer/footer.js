@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+import logo from "../../images/logo.png"
 
 // Styles
 import styles from "./footer.module.scss"
@@ -9,13 +11,23 @@ const Footer = () => {
       <div className="container">
         <div className="columns">
           <div className="column is-4">
-            <h2>Col One</h2>
+            <img src={logo} width="112" height="28" alt="logo" />
           </div>
           <div className="column is-4">
-            <h2>Col Two</h2>© {new Date().getFullYear()}
+            <div className="content">
+              <h2 className="is-size-1 has-text-white has-text-weight-semibold">
+                Let's Chat?
+              </h2>
+              <div>© {new Date().getFullYear()}</div>
+            </div>
           </div>
           <div className="column is-4">
-            <h2>Col Three</h2>
+            <Link
+              to="/contact"
+              className="button is-rounded is-outlined is-primary is-large"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>

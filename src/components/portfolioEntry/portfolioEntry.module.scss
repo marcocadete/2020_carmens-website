@@ -11,6 +11,14 @@
       opacity: 1;
     }
   }
+
+  a {
+    color: #323232 !important;
+
+    &:hover {
+      color: #217064 !important;
+    }
+  }
 }
 
 .image {

@@ -4,13 +4,13 @@ import BackgroundImage from "gatsby-background-image"
 
 // Components
 import Layout from "../../components/layout/layout"
-import PostEntry from "../../components/postEntry/postEntry"
+import PortfolioTemplateEntry from "../../components/portfolioTemplateEntry/portfolioTemplateEntry"
 
 // Styles
-import styles from "./blog.module.scss"
+import styles from "./portfolioList.module.scss"
 
-const Blog = props => {
-  const allPosts = props.data.wordpressData.posts.nodes
+const PortfolioList = props => {
+  const allPortfolios = props.data.wordpressData.portfolios.nodes
 
   const {
     pageContext: { pageNumber, hasNextPage },
@@ -23,13 +23,13 @@ const Blog = props => {
 
   const hasSearchResults = state.filteredData && state.query !== ""
 
-  const posts = hasSearchResults ? state.filteredData : allPosts
+  const portfolios = hasSearchResults ? state.filteredData : allPortfolios
 
   const handleInput = event => {
     const query = event.target.value
-    const filteredData = posts.filter(post => {
+    const filteredData = portfolios.filter(portfolio => {
       // Destructure data from post
-      const { title, tags } = post
+      const { title, tags } = portfolio
 
       // Extract just the names of the tags, so that we have an array of strings and not objects
       let listOfTagNames = []
@@ -48,7 +48,7 @@ const Blog = props => {
     // update state according to the latest query and results
     setState({
       query, // with current query string from the `Input` event
-      filteredData, // with filtered data from posts.filter(post => (//filteredData)) above
+      filteredData, // with filtered data from portfolios.filter(portfolio => (//filteredData)) above
     })
   }
 
@@ -58,14 +58,14 @@ const Blog = props => {
     if (!pageNumber) {
       return null
     } else if (1 === pageNumber) {
-      previousLink = `/blog`
+      previousLink = `/portfolio`
     } else if (1 < pageNumber) {
-      previousLink = `/blog/page/${pageNumber - 1}`
+      previousLink = `/portfolio/page/${pageNumber - 1}`
     }
 
     return (
       <Link to={previousLink} className="pagination-previous">
-        Previous Posts
+        Previous Portfolio
       </Link>
     )
   }
@@ -73,7 +73,10 @@ const Blog = props => {
   const renderNextLink = () => {
     if (hasNextPage) {
       return (
-        <Link to={`/blog/page/${pageNumber + 1}`} className="pagination-next">
+        <Link
+          to={`/portfolio/page/${pageNumber + 1}`}
+          className="pagination-next"
+        >
           Next Posts
         </Link>
       )
@@ -82,11 +85,11 @@ const Blog = props => {
     }
   }
 
-  if (posts.length > 0) {
+  if (portfolios.length > 0) {
     return (
       <Layout>
         <section className="container">
-          <div className={styles.blogSection}>
+          <div className={styles.portfolioSection}>
             <BackgroundImage
               className={styles.image}
               fluid={props.data.file.childImageSharp.fluid}
@@ -95,7 +98,7 @@ const Blog = props => {
                 <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop">
                   Sharing my{" "}
                   <span className="has-text-weight-bold cc-underline">
-                    thoughts
+                    work
                   </span>{" "}
                   with the world
                 </h1>
@@ -108,7 +111,7 @@ const Blog = props => {
                     onChange={handleInput}
                     className="input is-primary"
                     type="text"
-                    placeholder="Type to filter posts..."
+                    placeholder="Type to filter portfolios..."
                   />
                 </div>
               </div>
@@ -116,9 +119,9 @@ const Blog = props => {
               <div className="columns is-multiline">
                 {props.data &&
                   props.data.wordpressData &&
-                  posts.map(post => (
-                    <div className="column is-4" key={post.id}>
-                      <PostEntry post={post} />
+                  portfolios.map(portfolio => (
+                    <div className="column is-4" key={portfolio.id}>
+                      <PortfolioTemplateEntry portfolio={portfolio} />
                     </div>
                   ))}
               </div>
@@ -156,18 +159,14 @@ const Blog = props => {
     return (
       <Layout>
         <section className="container">
-          <div className={styles.blogSection}>
+          <div className={styles.portfolioSection}>
             <BackgroundImage
               className={styles.image}
               fluid={props.data.file.childImageSharp.fluid}
             >
               <div className={styles.header}>
                 <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop has-text-weight-semibold">
-                  Sharing my
-                  <span className="has-text-weight-bold cc-underline">
-                    thoughts
-                  </span>{" "}
-                  with the world
+                  Sharing my work with the world
                 </h1>
               </div>
             </BackgroundImage>
@@ -183,7 +182,7 @@ const Blog = props => {
                 </div>
               </div>
               <h1 className="is-size-6-mobile is-size-4 cc-mt-40">
-                Sorry no posts where found, try searching again?{" "}
+                Sorry no portfolios where found, try searching again?{" "}
               </h1>
             </div>
           </div>
@@ -193,14 +192,14 @@ const Blog = props => {
   }
 }
 
-export default Blog
+export default PortfolioList
 
 export const query = graphql`
-  query GET_POSTS($ids: [ID]) {
+  query GET_PORTFOLIOS($ids: [ID]) {
     wordpressData {
-      posts(where: { in: $ids }) {
+      portfolios(where: { in: $ids }) {
         nodes {
-          ...PostEntryFragment
+          ...PortfolioEntryFragment
         }
       }
     }

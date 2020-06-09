@@ -44,12 +44,21 @@ module.exports = async ({ actions, graphql }) => {
 
   await fetchTags({ first: 100, after: null }).then(allTags => {
     const tagTemplate = path.resolve(`./src/templates/tag/tag.js`)
+    const portfolioTagTemplate = path.resolve(
+      `./src/templates/tag/portfolioTag.js`
+    )
 
     allTags.map(tag => {
       console.log(`create tag: ${tag.slug}`)
       createPage({
         path: `/blog/tag/${tag.slug}`,
         component: tagTemplate,
+        context: tag,
+      })
+
+      createPage({
+        path: `/portfolio/tag/${tag.slug}`,
+        component: portfolioTagTemplate,
         context: tag,
       })
     })

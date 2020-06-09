@@ -6,10 +6,13 @@ import styles from "./about.module.scss"
 // Components
 import VideoWithThumbnail from "../videoWithThumbnail/videoWithThumbnail"
 import Skills from "../skills/skills"
+import Languages from "../languages/languages"
+import ContentNav from "../contentNav/contentNav"
+import List from "../list/list"
 
 const About = () => {
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <div className="container">
         <div className="columns">
           <div className="column is-6">
@@ -29,17 +32,10 @@ const About = () => {
                   essentially unchanged. It was popularised in the 1960s with
                   the release of Letraset sheets containing Lorem Ipsum
                   passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
+                  like Aldus PageMaker including versions of Lorem Ipsum. like
+                  Aldus PageMaker including
                 </p>
               </div>
-            </div>
-            <div className="columns">
-              <div className="column">
-                <div className="content">
-                  <Skills />
-                </div>
-              </div>
-              <div className="column">...</div>
             </div>
           </div>
           <div className="column is-6">
@@ -48,6 +44,29 @@ const About = () => {
               videoTitle="Official Music Video on YouTube"
               videoImage="profile-thumbnail.jpg"
             />
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column is-6">
+            <div className="content">
+              <ContentNav
+                menu={["Technical Skills", "Design Skills", "Languages"]}
+              >
+                <Skills />
+                <List
+                  listItems={[
+                    "Graphic Design",
+                    "Basic video editing",
+                    "Website Design",
+                    "Logo Design & branding",
+                    "Printed & digital media",
+                    "Image manipulation",
+                    "Social media content management",
+                  ]}
+                />
+                <Languages />
+              </ContentNav>
+            </div>
           </div>
         </div>
       </div>

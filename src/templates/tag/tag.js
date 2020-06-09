@@ -33,7 +33,6 @@ const TagTemplate = props => {
     const filteredData = posts.filter(post => {
       // Destructure data from post
       const { title, tags } = post
-
       // Extract just the names of the tags, so that we have an array of strings and not objects
       let listOfTagNames = []
       if (tags.nodes.length > 0) {
@@ -68,7 +67,11 @@ const TagTemplate = props => {
             >
               <div className={styles.header}>
                 <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop">
-                  Sharing my thoughts with the world
+                  Sharing my{" "}
+                  <span className="has-text-weight-bold cc-underline">
+                    thoughts
+                  </span>{" "}
+                  with the world
                 </h1>
               </div>
             </BackgroundImage>
@@ -114,7 +117,11 @@ const TagTemplate = props => {
             >
               <div className={styles.header}>
                 <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop has-text-weight-semibold">
-                  Sharing my thoughts with the world
+                  Sharing my{" "}
+                  <span className="has-text-weight-bold cc-underline">
+                    thoughts
+                  </span>{" "}
+                  with the world
                 </h1>
               </div>
             </BackgroundImage>
@@ -157,7 +164,34 @@ export const pageQuery = graphql`
         slug
         posts(first: 100) {
           nodes {
-            ...PostEntryFragment
+            id
+            title
+            slug
+            date
+            content: excerpt
+            author {
+              name
+              slug
+              avatar(size: 100) {
+                url
+              }
+            }
+            tags {
+              nodes {
+                name
+              }
+            }
+            featuredImage {
+              sourceUrl
+              imageFile {
+                childImageSharp {
+                  fluid(maxWidth: 640, maxHeight: 426, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluidLimitPresentationSize
+                  }
+                }
+              }
+            }
           }
         }
       }

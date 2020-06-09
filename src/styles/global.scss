@@ -4,6 +4,7 @@
 
 // If need, change your variables before importing Bulma
 $link: #00d1b2;
+$link-hover: #217064;
 $family-primary: "Roboto", sans-serif;
 // $navbar-box-shadow-color: transparent;
 $navbar-background-color: #323232;
@@ -54,6 +55,11 @@ button.navbar-burger {
 // Error Pages
 .cc-error-msg {
   font-family: "Limelight", cursive;
+}
+
+// Typograhpy
+.cc-underline {
+  text-decoration: underline !important;
 }
 
 // Brand Colors

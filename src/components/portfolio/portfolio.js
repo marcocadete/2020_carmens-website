@@ -1,4 +1,6 @@
 import React from "react"
+import { IconContext } from "react-icons"
+import { FaArrowRight } from "react-icons/fa"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
 // Styles
@@ -45,6 +47,11 @@ const Portfolio = props => {
               <Link to="/portfolio" className="button">
                 View all
               </Link>
+              <IconContext.Provider value={{ color: "#00d1b2", size: "2em" }}>
+                <div className={"is-hidden-tablet " + styles.icon}>
+                  <FaArrowRight />
+                </div>
+              </IconContext.Provider>
             </div>
           </div>
         </div>
