@@ -94,7 +94,7 @@ export const pageQuery = graphql`
           sourceUrl
           imageFile {
             childImageSharp {
-              fluid(maxWidth: 2000, quality: 100) {
+              fluid(maxWidth: 2000, quality: 100, cropFocus: CENTER) {
                 ...GatsbyImageSharpFluid
               }
             }

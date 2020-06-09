@@ -2,10 +2,16 @@
   padding: 80px 20px 180px 20px;
 }
 
-.columns {
+.container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+
   @media (max-width: 768px) {
     flex-wrap: nowrap !important;
-    overflow: auto;
+    overflow-x: auto;
+    flex-shrink: 0;
   }
 }
 

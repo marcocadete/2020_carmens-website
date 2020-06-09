@@ -37,7 +37,7 @@ module.exports = {
         fieldName: "wordpressData",
         // URL to query from
         url: "https://info.carmencadete.com/graphql",
-        //refetchInterval: 10,
+        refetchInterval: 30,
       },
     },
     // SASS

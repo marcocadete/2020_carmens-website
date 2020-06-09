@@ -70,8 +70,7 @@ const TagTemplate = props => {
                   Sharing my{" "}
                   <span className="has-text-weight-bold cc-underline">
                     thoughts
-                  </span>{" "}
-                  with the world
+                  </span>
                 </h1>
               </div>
             </BackgroundImage>
@@ -120,8 +119,7 @@ const TagTemplate = props => {
                   Sharing my{" "}
                   <span className="has-text-weight-bold cc-underline">
                     thoughts
-                  </span>{" "}
-                  with the world
+                  </span>
                 </h1>
               </div>
             </BackgroundImage>

@@ -96,8 +96,7 @@ const Blog = props => {
                   Sharing my{" "}
                   <span className="has-text-weight-bold cc-underline">
                     thoughts
-                  </span>{" "}
-                  with the world
+                  </span>
                 </h1>
               </div>
             </BackgroundImage>
@@ -163,11 +162,10 @@ const Blog = props => {
             >
               <div className={styles.header}>
                 <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop has-text-weight-semibold">
-                  Sharing my
+                  Sharing my{" "}
                   <span className="has-text-weight-bold cc-underline">
                     thoughts
-                  </span>{" "}
-                  with the world
+                  </span>
                 </h1>
               </div>
             </BackgroundImage>

@@ -99,8 +99,7 @@ const PortfolioList = props => {
                   Sharing my{" "}
                   <span className="has-text-weight-bold cc-underline">
                     work
-                  </span>{" "}
-                  with the world
+                  </span>
                 </h1>
               </div>
             </BackgroundImage>
@@ -166,7 +165,10 @@ const PortfolioList = props => {
             >
               <div className={styles.header}>
                 <h1 className="has-text-white is-size-3 is-size-3-tablet is-size-1-desktop has-text-weight-semibold">
-                  Sharing my work with the world
+                  Sharing my{" "}
+                  <span className="has-text-weight-bold cc-underline">
+                    work
+                  </span>
                 </h1>
               </div>
             </BackgroundImage>
@@ -205,7 +207,7 @@ export const query = graphql`
     }
     file(relativePath: { eq: "blog-header.jpg" }) {
       childImageSharp {
-        fluid(quality: 90, maxWidth: 1920) {
+        fluid(quality: 90, maxWidth: 1920, cropFocus: CENTER) {
           ...GatsbyImageSharpFluid
         }
       }

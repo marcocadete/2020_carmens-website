@@ -13,7 +13,7 @@ const Portfolio = props => {
   const data = useStaticQuery(graphql`
     query {
       wordpressData {
-        portfolios(first: 6) {
+        portfolios(first: 8) {
           nodes {
             excerpt
             id
@@ -23,9 +23,13 @@ const Portfolio = props => {
               sourceUrl
               imageFile {
                 childImageSharp {
-                  fluid(maxWidth: 640, maxHeight: 426, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                    ...GatsbyImageSharpFluidLimitPresentationSize
+                  fixed(
+                    width: 300
+                    height: 200
+                    quality: 100
+                    cropFocus: CENTER
+                  ) {
+                    ...GatsbyImageSharpFixed
                   }
                 }
               }
@@ -58,14 +62,15 @@ const Portfolio = props => {
       </div>
       <hr className="is-invisible" />
       <div className={"container " + styles.container}>
-        <div className={"columns is-mobile is-multiline " + styles.columns}>
+        {/* <div className={"columns is-mobile is-multiline " + styles.columns}> */}
+        <div className={styles.container}>
           {listOfPortfolios.map(portfolio => (
             <PortfolioEntry
               key={portfolio.id}
               title={portfolio.title}
               excerpt={portfolio.excerpt}
               slug={portfolio.slug}
-              image={portfolio.featuredImage.imageFile.childImageSharp.fluid}
+              image={portfolio.featuredImage.imageFile.childImageSharp.fixed}
             />
           ))}
         </div>
