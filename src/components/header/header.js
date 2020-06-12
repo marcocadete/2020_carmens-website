@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 // Styles
@@ -37,9 +37,12 @@ const Header = () => {
                     strategic thinking.
                   </span>
                 </p>
-                <button className="button is-primary is-rounded cc-mt-30">
+                <Link
+                  to="/portfolio"
+                  className="button is-primary is-rounded cc-mt-30"
+                >
                   See my work
-                </button>
+                </Link>
               </div>
             </div>
           </div>
