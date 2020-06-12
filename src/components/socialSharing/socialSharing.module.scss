@@ -1,21 +1,29 @@
-// .social {
-//   right: 0;
-//   position: fixed;
-//   top: 50%;
-//   transform: translate(0px, -50%);
-//   background-color: #00d1b2;
-//   padding: 15px;
-// }
+.social {
+  display: none;
+  right: 0;
+  position: fixed;
+  top: 50%;
+  transform: translate(0px, -50%);
+  background-color: #00d1b2;
+  padding: 15px;
+  z-index: 9999999;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
 
-// a {
-//   color: #323232;
-//   display: block;
+  @media (min-width: 1073px) {
+    display: block;
+  }
+}
 
-//   &:hover {
-//     color: #fff;
-//   }
-// }
+a {
+  color: #323232;
+  display: block;
 
-// .icons {
-//   margin: 5px 0;
-// }
+  &:hover {
+    color: #fff;
+  }
+}
+
+.icons {
+  margin: 5px 0;
+}

@@ -1,4 +1,13 @@
 import React from "react"
+import { IconContext } from "react-icons"
+import {
+  FaTwitter,
+  FaBehance,
+  FaInstagram,
+  FaFacebook,
+  FaLinkedin,
+} from "react-icons/fa"
+
 import logo from "../../images/footer-logo.png"
 
 // Styles
@@ -29,8 +38,29 @@ const Footer = () => {
           </div>
         </div>
         <div className="columns is-centered">
-          <div className="column is-6">
+          <div className="column is-4">
             <div className="cc-mt-30">
+              <div className={styles.social}>
+                <IconContext.Provider
+                  value={{ size: "1.3em", className: styles.icons }}
+                >
+                  <a href="https://www.linkedin.com/in/carmen-cadete">
+                    <FaLinkedin />
+                  </a>
+                  <a href="https://twitter.com/CarmzyParmzy">
+                    <FaTwitter />
+                  </a>
+                  <a href="https://www.facebook.com/carmencadetedesign">
+                    <FaFacebook />
+                  </a>
+                  <a href="https://www.behance.net/carmencadete1">
+                    <FaBehance />
+                  </a>
+                  <a href="https://www.instagram.com/carmen.cadete">
+                    <FaInstagram />
+                  </a>
+                </IconContext.Provider>
+              </div>
               Copyright © {new Date().getFullYear()} carmencadete.com. All
               rights reserved
             </div>

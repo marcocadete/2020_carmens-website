@@ -12,7 +12,11 @@ const Testimonial = props => {
       <figure className={styles.testimonial}>
         <div className={styles.figWrapper}>
           <div>
-            <img className={styles.image} src={props.imageUrl} />
+            <img
+              className={styles.image}
+              src={props.imageUrl}
+              alt={props.author}
+            />
             <figcaption className={styles.figCaption}>
               <cite className={styles.author}>{props.author}</cite>
               <cite className={"is-size-7 " + styles.occupation}>

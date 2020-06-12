@@ -7,3 +7,23 @@
     padding: 80px 20px;
   }
 }
+
+.social {
+  text-align: left;
+  display: flex;
+  margin-bottom: 40px;
+
+  a {
+    margin: 5px 10px;
+    color: #00d1b2;
+    display: block;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .icons {
+    margin: 5px 0;
+  }
+}

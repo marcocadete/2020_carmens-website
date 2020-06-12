@@ -16,19 +16,19 @@ const SocialSharing = () => (
 
   <div className={styles.social}>
     <IconContext.Provider value={{ size: "1.3em", className: styles.icons }}>
-      <a href="http://localhost:8000/">
+      <a href="https://www.linkedin.com/in/carmen-cadete">
         <FaLinkedin />
       </a>
-      <a href="http://localhost:8000/">
+      <a href="https://twitter.com/CarmzyParmzy">
         <FaTwitter />
       </a>
-      <a href="http://localhost:8000/">
+      <a href="https://www.facebook.com/carmencadetedesign">
         <FaFacebook />
       </a>
-      <a href="http://localhost:8000/">
+      <a href="https://www.behance.net/carmencadete1">
         <FaBehance />
       </a>
-      <a href="http://localhost:8000/">
+      <a href="https://www.instagram.com/carmen.cadete">
         <FaInstagram />
       </a>
     </IconContext.Provider>

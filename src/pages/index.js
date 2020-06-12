@@ -18,7 +18,7 @@ const IndexPage = () => (
     <Testimonials />
     <Portfolio />
 
-    {/* <SocialSharing /> */}
+    <SocialSharing />
   </Layout>
 )
 
