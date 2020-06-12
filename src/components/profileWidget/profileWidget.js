@@ -21,33 +21,31 @@ const ProfileWidget = () => {
           Carmen Cadete
         </h2>
         <p className="cc-mt-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry’s standard dummy text ever
-          since the 1500s.
+          I'm a freelance graphic designer based in Germany.
         </p>
         <div className="cc-mt-15 is-flex is-size-4">
           <div className="cc-mr-10 cc-color-behance">
-            <a href="/">
+            <a href="https://www.behance.net/carmencadete1">
               <FaBehance />
             </a>
           </div>
           <div className="cc-mr-10 cc-color-facebook">
-            <a href="/">
+            <a href="https://www.facebook.com/carmencadetedesign/">
               <FaFacebook />
             </a>
           </div>
           <div className="cc-mr-10 cc-color-instagram">
-            <a href="/">
+            <a href="https://www.instagram.com/carmen.cadete/ ">
               <FaInstagram />
             </a>
           </div>
           <div className="cc-mr-10 cc-color-linkedin">
-            <a href="/">
+            <a href="https://www.linkedin.com/in/carmen-cadete/">
               <FaLinkedinIn />
             </a>
           </div>
           <div className="cc-mr-10 cc-color-twitter">
-            <a href="/">
+            <a href="https://twitter.com/CarmzyParmzy ">
               <FaTwitter />
             </a>
           </div>

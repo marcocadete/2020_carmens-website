@@ -38,7 +38,7 @@ const Header = () => {
                   </span>
                 </p>
                 <button className="button is-primary is-rounded cc-mt-30">
-                  How I can help you
+                  See my work
                 </button>
               </div>
             </div>

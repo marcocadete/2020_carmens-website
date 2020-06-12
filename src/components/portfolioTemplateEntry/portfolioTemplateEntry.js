@@ -17,18 +17,9 @@ const PortfolioTemplateEntry = ({ portfolio }) => {
           />
         )}
       </div>
-      <h2 className="cc-mt-15 cc-mb-15 is-size-5 is-size-4-desktop has-text-weight-semibold">
-        <Link to={`/portfolio/${portfolio.slug}`}>{portfolio.title}</Link>
-      </h2>
-      <div
-        className="content"
-        dangerouslySetInnerHTML={{ __html: portfolio.content }}
-      />
-      <Link
-        to={`/portfolio/${portfolio.slug}`}
-        className="button is-small is-rounded is-link"
-      >
-        Continue reading
+
+      <Link className="button" to={`/portfolio/${portfolio.slug}`}>
+        View Portfolio
       </Link>
     </article>
   )

@@ -4,6 +4,7 @@ import BackgroundImage from "gatsby-background-image"
 
 // Components
 import Layout from "../../components/layout/layout"
+import SEO from "../../components/seo"
 import PortfolioTemplateEntry from "../../components/portfolioTemplateEntry/portfolioTemplateEntry"
 
 // Styles
@@ -88,6 +89,7 @@ const PortfolioList = props => {
   if (portfolios.length > 0) {
     return (
       <Layout>
+        <SEO title="Portfolio" />
         <section className="container">
           <div className={styles.portfolioSection}>
             <BackgroundImage
@@ -157,6 +159,7 @@ const PortfolioList = props => {
   } else {
     return (
       <Layout>
+        <SEO title="Portfolio" />
         <section className="container">
           <div className={styles.portfolioSection}>
             <BackgroundImage

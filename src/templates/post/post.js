@@ -5,6 +5,7 @@ import { FaBars } from "react-icons/fa"
 
 // Components
 import Layout from "../../components/layout/layout"
+import SEO from "../../components/seo"
 import ProfileWidget from "../../components/profileWidget/profileWidget"
 import TagWidget from "../../components/tagWidget/tagWidget"
 
@@ -25,6 +26,7 @@ const Post = props => {
 
   return (
     <Layout>
+      <SEO title={post.title} />
       <section className={styles.post}>
         <div className="container">
           <div className="columns is-multiline">

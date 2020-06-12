@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-import logo from "../../images/logo.png"
+import logo from "../../images/footer-logo.png"
 
 // Styles
 import styles from "./footer.module.scss"
@@ -18,16 +17,19 @@ const Footer = () => {
               <h2 className="is-size-1 has-text-white has-text-weight-semibold">
                 Let's Chat?
               </h2>
-              <div>© {new Date().getFullYear()}</div>
+              <div>
+                Copyright © {new Date().getFullYear()} carmencadete.com. All
+                rights reserved
+              </div>
             </div>
           </div>
           <div className="column is-4">
-            <Link
-              to="/contact"
+            <a
+              href="mailto:carmen@cadete.me"
               className="button is-rounded is-outlined is-primary is-large"
             >
               Contact
-            </Link>
+            </a>
           </div>
         </div>
       </div>

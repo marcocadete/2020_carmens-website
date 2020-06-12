@@ -4,6 +4,7 @@ import BackgroundImage from "gatsby-background-image"
 
 // Components
 import Layout from "../../components/layout/layout"
+import SEO from "../../components/seo"
 import PostEntry from "../../components/postEntry/postEntry"
 
 // Styles
@@ -85,6 +86,7 @@ const Blog = props => {
   if (posts.length > 0) {
     return (
       <Layout>
+        <SEO title="Blog" />
         <section className="container">
           <div className={styles.blogSection}>
             <BackgroundImage
@@ -154,6 +156,7 @@ const Blog = props => {
   } else {
     return (
       <Layout>
+        <SEO title="Blog" />
         <section className="container">
           <div className={styles.blogSection}>
             <BackgroundImage

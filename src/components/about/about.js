@@ -19,21 +19,28 @@ const About = () => {
             <div className={styles.info}>
               <div className="content">
                 <h2 className="has-text-grey-dark">About Me</h2>
-                <h3 className="has-text-grey-dark">
-                  Why hire me for your next project?
-                </h3>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum. like
-                  Aldus PageMaker including
+                  I’m a self-taught graphic designer based in Germany. My
+                  passion for Graphic design started 8 years ago when I
+                  discovered Photoshop.
+                </p>
+                <p>
+                  I have gained experience working in an in-house design studio,
+                  a graphic design, and print studio, as a marketing coordinator
+                  for an automotive company, as well as designing on a freelance
+                  basis.
+                </p>
+                <p>
+                  I maintain a healthy balance between functionality and form,
+                  and I would consider my design style as minimalistic. My goal
+                  is to guide an audience to act through communicating strategic
+                  design solutions. Understanding all the pain points of the
+                  project and collaborating every step of the way is an
+                  important part of my process.
+                </p>
+                <p>
+                  I enjoy keeping up with the latest design trends and love
+                  improving my skills in my free time.
                 </p>
               </div>
             </div>
