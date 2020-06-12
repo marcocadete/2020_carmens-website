@@ -13,14 +13,22 @@
   @media (min-width: 1073px) {
     display: block;
   }
-}
 
-a {
-  color: #323232;
-  display: block;
+  a {
+    color: #217064 !important;
+    display: block !important;
 
-  &:hover {
-    color: #fff;
+    &:hover {
+      color: #fff !important;
+    }
+
+    &:visited {
+      color: #217064 !important;
+    }
+
+    &:visited:hover {
+      color: #fff !important;
+    }
   }
 }
 

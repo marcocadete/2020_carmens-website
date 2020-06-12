@@ -48,7 +48,7 @@ const Portfolio = props => {
           <div className="column is-4">
             <div className="content">
               <h2>Portfolio</h2>
-              <Link to="/portfolio" className="button">
+              <Link to="/portfolio" className="button is-primary">
                 View all
               </Link>
               <IconContext.Provider value={{ color: "#00d1b2", size: "2em" }}>
