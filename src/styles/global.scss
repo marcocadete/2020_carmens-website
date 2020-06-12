@@ -1,12 +1,14 @@
 @charset "utf-8";
+/* Imports: Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap");
 
-// If need, change your variables before importing Bulma
+/* If need, change your variables before importing Bulma */
 $link: #00d1b2;
 $link-hover: #217064;
 $family-primary: "Roboto", sans-serif;
-// $navbar-box-shadow-color: transparent;
+
+/* Bulma: custom navbar */
 $navbar-background-color: #323232;
 $navbar-item-color: #fff;
 $navbar-item-hover-color: #00d1b2;
@@ -14,25 +16,31 @@ $navbar-item-hover-background-color: #323232;
 $navbar-item-active-color: #00d1b2;
 $navbar-item-active-background-color: #323232;
 $navbar-burger-color: #00d1b2;
-// $navbar-tab-hover-background-color: pink !important;
-$navbar-tab-hover-border-bottom-color: blue;
-// $navbar-tab-active-color:
-// $navbar-tab-active-background-color:
 $navbar-tab-active-border-bottom-color: #00d1b2;
 $navbar-tab-active-border-bottom-style: solid;
-$modal-z: 100;
-// $navbar-dropdown-background-color:
-// $navbar-dropdown-item-hover-color: red;
-// $navbar-dropdown-item-hover-background-color: orange;
-// $navbar-dropdown-item-active-color:
-// $navbar-dropdown-item-active-background-color:
-// $navbar-divider-background-color:
-// $navbar-dropdown-item-hover-background-color: orange;
 
+/* Bulma: custom modal */
+$modal-z: 100;
+
+/* Imports: Bulma and Slick carousel */
 @import "~bulma/bulma.sass";
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Slick carousel custom */
 .slick-dots li button:before {
   color: #00d1b2 !important;
 }
@@ -52,17 +60,17 @@ button.navbar-burger {
   height: 5px !important;
 }
 
-// Error Pages
+/* Error Pages */
 .cc-error-msg {
   font-family: "Limelight", cursive;
 }
 
-// Typograhpy
+/* Typograhpy */
 .cc-underline {
   text-decoration: underline !important;
 }
 
-// Brand Colors
+/* Brand Colors */
 .cc-color-facebook {
   color: #4267b2;
 }
@@ -85,19 +93,6 @@ button.navbar-burger {
 
 hr {
   background-color: #fff;
-}
-
-html {
-  overflow-y: auto;
-  overflow-x: hidden;
-  font-family: "Roboto", sans-serif;
-  background-color: #fff;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: #fff;
-  overflow: hidden;
 }
 
 /* Custom Margins */
@@ -185,7 +180,12 @@ body {
   margin-left: 40px !important;
 }
 
-/* =Column
+/* Custom text align */
+.cc-centered {
+  text-align: center;
+}
+
+/* WordPress Gutenberg
 -------------------------------------------------------------- */
 .widget-col {
   @media (min-width: 1024px) {
@@ -193,8 +193,6 @@ body {
   }
 }
 
-/* =WordPress
--------------------------------------------------------------- */
 .wp-block-embed {
   display: flex;
   justify-content: center;
@@ -243,9 +241,6 @@ body {
   width: 100% !important;
 }
 
-.wp-block-pullqoute {
-}
-
 .wp-block-social-links {
   display: flex;
   flex-wrap: wrap;
@@ -256,14 +251,7 @@ body {
   margin: 5px;
 }
 
-.wp-social-link-wordpress {
-}
-.wp-social-link-facebook {
-  fill: blue;
-}
-
 .wp-block-button {
-  background-color: #4caf50;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -275,10 +263,7 @@ body {
   cursor: pointer;
 }
 
-.wp-block-button__link {
-}
-
-/* =WordPress Core
+/* WordPress Core
 -------------------------------------------------------------- */
 .alignright {
   justify-content: flex-end;
