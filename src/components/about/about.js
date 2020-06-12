@@ -55,7 +55,7 @@ const About = () => {
         </div>
         <div className="columns">
           <div className="column is-6">
-            <div className="content">
+            <div className={"content " + styles.meta}>
               <ContentNav
                 menu={["Technical Skills", "Design Skills", "Languages"]}
               >

@@ -11,3 +11,13 @@
     margin-bottom: 40px;
   }
 }
+
+.meta {
+  margin-top: 40px;
+}
+
+.meta {
+  @media (min-width: 768px) {
+    margin-top: 0px;
+  }
+}
