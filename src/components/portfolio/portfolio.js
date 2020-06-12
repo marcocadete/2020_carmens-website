@@ -51,6 +51,7 @@ const Portfolio = props => {
               <Link to="/portfolio" className="button is-primary">
                 View all
               </Link>
+
               <IconContext.Provider value={{ color: "#00d1b2", size: "2em" }}>
                 <div className={"is-hidden-tablet " + styles.icon}>
                   <FaArrowRight />
@@ -62,7 +63,6 @@ const Portfolio = props => {
       </div>
       <hr className="is-invisible" />
       <div className={"container " + styles.container}>
-        {/* <div className={"columns is-mobile is-multiline " + styles.columns}> */}
         <div className={styles.container}>
           {listOfPortfolios.map(portfolio => (
             <PortfolioEntry
