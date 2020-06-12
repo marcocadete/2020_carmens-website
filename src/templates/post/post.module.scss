@@ -1,6 +1,10 @@
 .post {
-  padding: 80px 10px;
   min-height: 100vh;
+  padding: 10px 10px;
+
+  @media (min-width: 1024px) {
+    padding: 80px 10px;
+  }
 }
 
 .toggle-container {
