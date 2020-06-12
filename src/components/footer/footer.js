@@ -17,10 +17,6 @@ const Footer = () => {
               <h2 className="is-size-1 has-text-white has-text-weight-semibold">
                 Let's Chat?
               </h2>
-              <div>
-                Copyright © {new Date().getFullYear()} carmencadete.com. All
-                rights reserved
-              </div>
             </div>
           </div>
           <div className="column is-4">
@@ -30,6 +26,14 @@ const Footer = () => {
             >
               Contact
             </a>
+          </div>
+        </div>
+        <div className="columns is-centered">
+          <div className="column is-6">
+            <div className="cc-mt-30">
+              Copyright © {new Date().getFullYear()} carmencadete.com. All
+              rights reserved
+            </div>
           </div>
         </div>
       </div>
