@@ -77,9 +77,7 @@ const PortfolioTagTemplate = props => {
             </BackgroundImage>
             <div className="container">
               <h1 className="is-size-6 is-size-4-desktop cc-mb-5">
-                <span className="is-italic cc-mr-15">
-                  Portfolios related to:
-                </span>
+                <span className="is-italic cc-mr-15">Projects related to:</span>
                 <span className="has-text-primary is-size-4 is-size-3-desktop">
                   {tag.name}
                 </span>
@@ -128,9 +126,7 @@ const PortfolioTagTemplate = props => {
             </BackgroundImage>
             <div className="container">
               <h1 className="is-size-6 is-size-4-desktop cc-mb-5">
-                <span className="is-italic cc-mr-15">
-                  Portfolios related to:
-                </span>
+                <span className="is-italic cc-mr-15">Projects related to:</span>
                 <span className="has-text-primary is-size-4 is-size-3-desktop">
                   {tag.name}
                 </span>
@@ -146,7 +142,7 @@ const PortfolioTagTemplate = props => {
                 </div>
               </div>
               <h1 className="is-size-6-mobile is-size-4 cc-mt-40">
-                Sorry no portfolios where found, try searching again?{" "}
+                Sorry no projects where found, try searching again?{" "}
               </h1>
             </div>
           </div>
