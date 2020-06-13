@@ -67,9 +67,8 @@ const Portfolio = props => {
             <div
               className={
                 showSideMenu
-                  ? "column widget-col is-12 is-3-desktop is-offset-1-desktop" +
-                    styles.showSideMenu
-                  : styles.hideSideMenu
+                  ? "column widget-col is-12 is-3-desktop is-offset-1-desktop"
+                  : "column widget-col is-12 is-offset-2-desktop"
               }
             >
               <ProfileWidget />

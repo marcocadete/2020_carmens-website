@@ -28,17 +28,3 @@
     visibility: visible;
   }
 }
-
-.hideSideMenu {
-  margin-bottom: 30px;
-  @media (min-width: 1024px) {
-    display: none;
-  }
-}
-
-.showSideMenu {
-  margin-bottom: 30px;
-  @media (min-width: 1024px) {
-    display: block;
-  }
-}
