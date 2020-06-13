@@ -19,7 +19,7 @@ const PortfolioTemplateEntry = ({ portfolio }) => {
       </div>
 
       <Link className="button is-dark" to={`/portfolio/${portfolio.slug}`}>
-        View Portfolio
+        View Project
       </Link>
     </article>
   )

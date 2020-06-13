@@ -15,7 +15,7 @@ const PortfolioEntry = props => {
           <Link to={`/portfolio/${props.slug}`}>{props.title}</Link>
         </h2>
         <Link className={styles.viewBtn} to={`/portfolio/${props.slug}`}>
-          View Portfolio
+          View Project
         </Link>
       </div>
       <div className={styles.overlay}></div>
