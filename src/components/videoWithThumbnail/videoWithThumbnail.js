@@ -17,10 +17,11 @@ const VideoWithThumbnail = ({ videoSrcURL, videoTitle, ...props }) => {
 
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "video-img.jpeg" }) {
+      placeholderImage: file(relativePath: { eq: "video-img.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }

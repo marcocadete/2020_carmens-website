@@ -49,7 +49,6 @@ const About = () => {
             <VideoWithThumbnail
               videoSrcURL="https://www.youtube.com/embed/0Q68a65tjhI"
               videoTitle="Hi, I'm Carmen Cadete. 1 minute introduction."
-              videoImage="profile-thumbnail.jpg"
             />
           </div>
         </div>

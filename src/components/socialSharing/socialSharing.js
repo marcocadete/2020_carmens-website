@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaFacebook,
   FaLinkedin,
+  FaYoutube,
 } from "react-icons/fa"
 
 // Styles
@@ -30,6 +31,9 @@ const SocialSharing = () => (
       </a>
       <a href="https://www.instagram.com/carmen.cadete">
         <FaInstagram />
+      </a>
+      <a href="https://www.youtube.com/channel/UCY5ItuO-G3VAij6uk86gjKg">
+        <FaYoutube />
       </a>
     </IconContext.Provider>
   </div>
