@@ -8,7 +8,7 @@ import styles from "./header.module.scss"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "header.png" }) {
+      placeholderImage: file(relativePath: { eq: "header_image.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
@@ -28,8 +28,8 @@ const Header = () => {
                 <h1>Carmen Cadete</h1>
                 <p>A freelance graphic designer based in Germany.</p>
                 <p>
-                  I combine
-                  <span className="is-italic has-text-weight-semibold	has-text-primary cc-mr-5 cc-ml-5">
+                  I combine {" "}
+                  <span className="is-italic has-text-weight-semibold	has-text-primary">
                     creativity{" "}
                   </span>
                   with
