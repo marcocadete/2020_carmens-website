@@ -47,7 +47,7 @@ const About = () => {
           </div>
           <div className="column is-6">
             <VideoWithThumbnail
-              videoSrcURL="https://youtu.be/0Q68a65tjhI"
+              videoSrcURL="https://www.youtube.com/embed/0Q68a65tjhI"
               videoTitle="Hi, I'm Carmen Cadete. 1 minute introduction."
               videoImage="profile-thumbnail.jpg"
             />
