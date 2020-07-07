@@ -187,7 +187,7 @@ const PortfolioList = props => {
                 </div>
               </div>
               <h1 className="is-size-6-mobile is-size-4 cc-mt-40">
-                Sorry no portfolios where found, try searching again?{" "}
+                Sorry no portfolios were found, try searching again?{" "}
               </h1>
             </div>
           </div>

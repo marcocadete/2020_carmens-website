@@ -184,7 +184,7 @@ const Blog = props => {
                 </div>
               </div>
               <h1 className="is-size-6-mobile is-size-4 cc-mt-40">
-                Sorry no posts were found, try searching again?{" "}
+                Sorry no posts where found, try searching again?{" "}
               </h1>
             </div>
           </div>
