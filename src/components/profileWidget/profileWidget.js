@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaTwitter,
   FaBehance,
+  FaYoutube,
 } from "react-icons/fa"
 // Styles
 import styles from "./profileWidget.module.scss"
@@ -47,6 +48,11 @@ const ProfileWidget = () => {
           <div className="cc-mr-10 cc-color-twitter">
             <a href="https://twitter.com/CarmzyParmzy">
               <FaTwitter />
+            </a>
+          </div>
+          <div className="cc-mr-10 cc-color-youtube">
+            <a href="https://www.youtube.com/channel/UCY5ItuO-G3VAij6uk86gjKg">
+              <FaYoutube />
             </a>
           </div>
         </div>
