@@ -344,3 +344,9 @@ a.button {
 a.button:hover {
   color: #111 !important;
 }
+
+@media (min-width: 1024px) {
+  a.navbar-burger {
+    display: none !important;
+  }
+}

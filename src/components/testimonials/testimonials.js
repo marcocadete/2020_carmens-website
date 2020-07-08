@@ -9,11 +9,48 @@ import styles from "./testimonials.module.scss"
 import Testimonial from "../testimonial/testimonial"
 
 const Testimonials = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      wordpressData {
+        testimonials {
+          nodes {
+            testimonial {
+              occupation
+              content
+              author
+              order
+              image {
+                sourceUrl
+              }
+            }
+            id
+          }
+        }
+      }
+    }
+  `)
   const [profileImages, setProfileImages] = useState([])
 
   useEffect(() => {
-    saveImageToState()
-  }, [profileImages])
+    if (data) {
+      const listOftestimonialNodes = data.wordpressData.testimonials.nodes
+
+      // Function to compare the testimonials order number for priority.
+      const compare = (a, b) => {
+        if (a.testimonial.order < b.testimonial.order) {
+          return -1
+        }
+        if (a.testimonial.order > b.testimonial.order) {
+          return 1
+        }
+        return 0
+      }
+
+      const testimonialsSortedByOrder = listOftestimonialNodes.sort(compare)
+
+      setProfileImages(testimonialsSortedByOrder)
+    }
+  }, [data])
 
   const settings = {
     dots: true,
@@ -40,44 +77,6 @@ const Testimonials = props => {
         },
       },
     ],
-  }
-
-  const data = useStaticQuery(graphql`
-    query {
-      wordpressData {
-        testimonials {
-          nodes {
-            testimonial {
-              occupation
-              content
-              author
-              order
-              image {
-                sourceUrl
-              }
-            }
-            id
-          }
-        }
-      }
-    }
-  `)
-  const listOftestimonialNodes = data.wordpressData.testimonials.nodes
-
-  // Function to compare the testimonials order number for priority.
-  const compare = (a, b) => {
-    if (a.testimonial.order < b.testimonial.order) {
-      return -1
-    }
-    if (a.testimonial.order > b.testimonial.order) {
-      return 1
-    }
-    return 0
-  }
-
-  const testimonialsSortedByOrder = listOftestimonialNodes.sort(compare)
-  const saveImageToState = () => {
-    setProfileImages(testimonialsSortedByOrder)
   }
 
   return (
