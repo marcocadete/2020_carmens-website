@@ -17,9 +17,9 @@ const Navbar = () => {
             <img src={logo} width="112" height="28" alt="logo" />
           </Link>
 
-          <button
-            // role="button"
-            // tabIndex="0"
+          <a
+            role="button"
+            tabIndex="0"
             onClick={toggleNavDropDown}
             className={
               showNav
@@ -33,7 +33,7 @@ const Navbar = () => {
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </button>
+          </a>
         </div>
 
         <div
