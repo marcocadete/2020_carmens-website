@@ -45,6 +45,7 @@ const Testimonials = props => {
               occupation
               content
               author
+              order
               image {
                 sourceUrl
               }
@@ -56,6 +57,19 @@ const Testimonials = props => {
     }
   `)
   const listOftestimonialNodes = data.wordpressData.testimonials.nodes
+
+  // Function to compare the testimonials order number for priority.
+  const compare = (a, b) => {
+    if (a.testimonial.order < b.testimonial.order) {
+      return -1
+    }
+    if (a.testimonial.order > b.testimonial.order) {
+      return 1
+    }
+    return 0
+  }
+
+  const testimonialsSortedByOrder = listOftestimonialNodes.sort(compare)
 
   return (
     <section className={styles.testimonials}>
@@ -69,7 +83,7 @@ const Testimonials = props => {
         </div>
 
         <Slider {...settings}>
-          {listOftestimonialNodes.map(node => (
+          {testimonialsSortedByOrder.map(node => (
             <Testimonial
               style={{ transform: "translateX(-0px)" }}
               key={node.id}
