@@ -11,7 +11,7 @@ const Testimonial = props => {
     <div className={styles.container} style={props.style}>
       <figure className={styles.testimonial}>
         <div className={styles.figWrapper}>
-          <div>
+          <div className={styles.imageContainer}>
             <img
               className={styles.image}
               src={props.imageUrl}
@@ -23,11 +23,11 @@ const Testimonial = props => {
                 {props.occupation}
               </cite>
             </figcaption>
-          </div>
-          <div className={styles.icon}>
-            <IconContext.Provider value={{ size: "3em", color: "#323232" }}>
-              <BsChatQuote />
-            </IconContext.Provider>
+            <div className={styles.icon}>
+              <IconContext.Provider value={{ size: "3em", color: "#323232" }}>
+                <BsChatQuote />
+              </IconContext.Provider>
+            </div>
           </div>
         </div>
         <blockquote>{props.content}</blockquote>

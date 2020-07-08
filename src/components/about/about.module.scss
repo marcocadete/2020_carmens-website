@@ -21,3 +21,28 @@
     margin-top: 0px;
   }
 }
+
+.video {
+  @media (min-width: 768px) {
+    margin-top: 40px;
+  }
+}
+
+.text-to-show {
+  display: none;
+  margin-top: 32px;
+
+  @media (min-width: 768px) {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 1214px) {
+  .text-to-hide {
+    display: none;
+  }
+
+  .text-to-show {
+    display: block;
+  }
+}

@@ -9,6 +9,7 @@ import Skills from "../skills/skills"
 import Languages from "../languages/languages"
 import ContentNav from "../contentNav/contentNav"
 import List from "../list/list"
+import CallToAction from "../cta/cta"
 
 const About = () => {
   return (
@@ -34,22 +35,43 @@ const About = () => {
                   I maintain a healthy balance between functionality and form,
                   and I would consider my design style as minimalistic. My goal
                   is to guide an audience to act through communicating strategic
-                  design solutions. Understanding all the pain points of the
-                  project and collaborating every step of the way is an
-                  important part of my process.
+                  design solutions.
                 </p>
-                <p>
-                  I enjoy keeping up with the latest design trends and love
-                  improving my skills in my free time.
-                </p>
+                <div className={styles.textToHide}>
+                  <p>
+                    Understanding all the pain points of the project and
+                    collaborating every step of the way is an important part of
+                    my process.
+                  </p>
+                  <p>
+                    I enjoy keeping up with the latest design trends and love
+                    improving my skills in my free time.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div className="column is-6">
-            <VideoWithThumbnail
-              videoSrcURL="https://www.youtube.com/embed/0Q68a65tjhI"
-              videoTitle="Hi, I'm Carmen Cadete. 1 minute introduction."
-            />
+            <div className={styles.video}>
+              <VideoWithThumbnail
+                videoSrcURL="https://www.youtube.com/embed/0Q68a65tjhI"
+                videoTitle="Hi, I'm Carmen Cadete. 1 minute introduction."
+              />
+            </div>
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column is-12">
+            <div className={styles.textToShow}>
+              <div className="content">
+                <p>
+                  Understanding all the pain points of the project and
+                  collaborating every step of the way is an important part of my
+                  process. I enjoy keeping up with the latest design trends and
+                  love improving my skills in my free time.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="columns">
@@ -73,6 +95,9 @@ const About = () => {
                 <Languages />
               </ContentNav>
             </div>
+          </div>
+          <div className="column is-6">
+            <CallToAction />
           </div>
         </div>
       </div>

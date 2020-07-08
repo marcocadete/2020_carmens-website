@@ -1,6 +1,6 @@
 .container {
   cursor: grab;
-  position: relative;
+  // position: relative;
   padding: 10px 20px;
   color: #323232;
   border-radius: 3px;
@@ -14,7 +14,13 @@
   background-color: #00d1b2;
   border-radius: 6px;
   padding: 20px;
-  min-height: 330px;
+  height: 290px;
+  overflow-y: auto;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
 }
 
 .image {
@@ -25,8 +31,8 @@
 
 .icon {
   position: absolute;
-  top: 25px;
-  right: 30px;
+  top: 0px;
+  right: 0px;
 }
 
 .fig-wrapper {
