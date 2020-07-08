@@ -16,6 +16,23 @@
   padding: 20px;
   height: 290px;
   overflow-y: auto;
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-button {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #068877;
+    border-radius: 6px;
+  }
 }
 
 .image-container {
