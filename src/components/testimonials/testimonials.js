@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Slider from "react-slick"
 
@@ -9,6 +9,12 @@ import styles from "./testimonials.module.scss"
 import Testimonial from "../testimonial/testimonial"
 
 const Testimonials = props => {
+  const [profileImages, setProfileImages] = useState([])
+
+  useEffect(() => {
+    saveImageToState()
+  }, [profileImages])
+
   const settings = {
     dots: true,
     infinite: true,
@@ -70,6 +76,9 @@ const Testimonials = props => {
   }
 
   const testimonialsSortedByOrder = listOftestimonialNodes.sort(compare)
+  const saveImageToState = () => {
+    setProfileImages(testimonialsSortedByOrder)
+  }
 
   return (
     <section className={styles.testimonials}>
@@ -81,9 +90,8 @@ const Testimonials = props => {
             </div>
           </div>
         </div>
-
         <Slider {...settings}>
-          {testimonialsSortedByOrder.map(node => (
+          {profileImages.map(node => (
             <Testimonial
               style={{ transform: "translateX(-0px)" }}
               key={node.id}
