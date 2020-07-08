@@ -27,3 +27,13 @@
     margin: 5px 0;
   }
 }
+
+.middle-column {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .middle-column {
+    margin-top: 0px;
+  }
+}

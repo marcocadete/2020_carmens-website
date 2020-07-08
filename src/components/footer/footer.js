@@ -26,7 +26,10 @@ const Footer = () => {
               <h2 className="is-size-3 has-text-white has-text-weight-semibold">
                 Ready to chat?
               </h2>
-              <p className="has-text-white">Let's bring your idea to life.</p>
+              <p className="has-text-white">
+                Let's bring your idea to life. I work with clients all over the
+                world.
+              </p>
               <p>
                 <a
                   href="mailto:carmencadete1@gmail.com"
@@ -35,39 +38,38 @@ const Footer = () => {
                   <FaEnvelope /> carmencadete1@gmail.com
                 </a>
               </p>
-              <p className="has-text-white">
-                I work with clients all over the world.
-              </p>
             </div>
           </div>
           <div className="column is-4">
-            <div className="content">
-              <h2 className="is-size-3 has-text-white has-text-weight-semibold">
-                Connect with me
-              </h2>
-              <div className={styles.social}>
-                <IconContext.Provider
-                  value={{ size: "1.3em", className: styles.icons }}
-                >
-                  <a href="https://www.linkedin.com/in/carmen-cadete">
-                    <FaLinkedin />
-                  </a>
-                  <a href="https://twitter.com/CarmzyParmzy">
-                    <FaTwitter />
-                  </a>
-                  <a href="https://www.facebook.com/carmencadetedesign">
-                    <FaFacebook />
-                  </a>
-                  <a href="https://www.behance.net/carmencadete1">
-                    <FaBehance />
-                  </a>
-                  <a href="https://www.instagram.com/carmen.cadete">
-                    <FaInstagram />
-                  </a>
-                  <a href="https://www.youtube.com/channel/UCY5ItuO-G3VAij6uk86gjKg">
-                    <FaYoutube />
-                  </a>
-                </IconContext.Provider>
+            <div className={styles.middleColumn}>
+              <div className="content">
+                <h2 className="is-size-3 has-text-white has-text-weight-semibold">
+                  Connect with me
+                </h2>
+                <div className={styles.social}>
+                  <IconContext.Provider
+                    value={{ size: "1.3em", className: styles.icons }}
+                  >
+                    <a href="https://www.linkedin.com/in/carmen-cadete">
+                      <FaLinkedin />
+                    </a>
+                    <a href="https://twitter.com/CarmzyParmzy">
+                      <FaTwitter />
+                    </a>
+                    <a href="https://www.facebook.com/carmencadetedesign">
+                      <FaFacebook />
+                    </a>
+                    <a href="https://www.behance.net/carmencadete1">
+                      <FaBehance />
+                    </a>
+                    <a href="https://www.instagram.com/carmen.cadete">
+                      <FaInstagram />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCY5ItuO-G3VAij6uk86gjKg">
+                      <FaYoutube />
+                    </a>
+                  </IconContext.Provider>
+                </div>
               </div>
             </div>
           </div>
