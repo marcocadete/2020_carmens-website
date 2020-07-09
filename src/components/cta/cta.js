@@ -10,7 +10,7 @@ const CallToAction = props => {
       <h2>I am available for freelance work.</h2>
       <div className={styles.button}>
         <a className="button is-primary is-rounded" href={props.href}>
-          Hire me!
+          Hire me
         </a>
       </div>
     </section>
