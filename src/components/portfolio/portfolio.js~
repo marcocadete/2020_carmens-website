@@ -51,6 +51,12 @@ const Portfolio = props => {
               <Link to="/portfolio" className="button is-primary">
                 View all
               </Link>
+
+              <IconContext.Provider value={{ color: "#00d1b2", size: "2em" }}>
+                <div className={"is-hidden-tablet " + styles.icon}>
+                  <FaArrowRight />
+                </div>
+              </IconContext.Provider>
             </div>
           </div>
         </div>

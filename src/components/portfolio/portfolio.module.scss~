@@ -19,6 +19,26 @@
   }
 }
 
+.icon {
+  margin-top: 30px;
+  animation-name: move;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 hr {
   @media (max-width: 768px) {
     margin-top: 0px;

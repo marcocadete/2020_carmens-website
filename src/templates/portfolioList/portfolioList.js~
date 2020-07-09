@@ -112,7 +112,7 @@ const PortfolioList = props => {
                     onChange={handleInput}
                     className="input is-primary"
                     type="text"
-                    placeholder="Type to filter projects..."
+                    placeholder="Type to filter portfolios..."
                   />
                 </div>
               </div>
@@ -182,7 +182,7 @@ const PortfolioList = props => {
                     onChange={handleInput}
                     className="input is-primary"
                     type="text"
-                    placeholder="Type to filter projects..."
+                    placeholder="Type to filter posts..."
                   />
                 </div>
               </div>
