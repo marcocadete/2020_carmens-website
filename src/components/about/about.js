@@ -97,7 +97,7 @@ const About = () => {
             </div>
           </div>
           <div className="column is-6">
-            <CallToAction href="mailto:carmen@cadete.me" />
+            <CallToAction href="mailto:carmencadete1@gmail.com" />
           </div>
         </div>
       </div>
