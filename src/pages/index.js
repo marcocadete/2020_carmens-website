@@ -11,7 +11,7 @@ import Portfolio from "../components/portfolio/portfolio"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Freelance Graphic Designer" />
     <Header />
     <Services />
     <About />
