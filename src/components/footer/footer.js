@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
           <div className="column is-4">
             <div className="cc-mt-25">
-              <a href="https://www.marcocadete.com">
+              <a href="https://blog.marcocadete.com">
                 Website developed by{" "}
                 <img
                   src={webDevLogo}
