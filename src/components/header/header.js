@@ -26,7 +26,7 @@ const Header = () => {
               <div className={styles.info}>
                 <h2 className="has-text-primary">Hello, I'm</h2>
                 <h1>Carmen Cadete</h1>
-                <p>A freelance graphic designer based in Germany.</p>
+                <p>A freelance graphic designer based in Namibia.</p>
                 <p>
                   I combine {" "}
                   <span className="is-italic has-text-weight-semibold	has-text-primary">

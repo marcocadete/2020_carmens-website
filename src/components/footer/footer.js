@@ -65,9 +65,6 @@ const Footer = () => {
                     <a href="https://www.instagram.com/carmen.cadete">
                       <FaInstagram />
                     </a>
-                    <a href="https://www.youtube.com/channel/UCY5ItuO-G3VAij6uk86gjKg">
-                      <FaYoutube />
-                    </a>
                   </IconContext.Provider>
                 </div>
               </div>
